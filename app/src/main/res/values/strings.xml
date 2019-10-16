@@ -5,8 +5,8 @@
    //로그인 및 회원가입
     <string name="login">로그인</string>
     <string name="join">회원가입</string>
-    <string name="ID">아이디</string>
-    <string name="PASSWORD">비밀번호</string>
+    <string name="od">아이디</string>
+    <string name="password">비밀번호</string>
     <string name="naver">NAVER 로그인하기</string>
     <string name="kakao">KAKAO 로그인하기</string>
     <string name="facebook">FACEBOOK 로그인하기</string>
