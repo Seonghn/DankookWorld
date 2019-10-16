@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="MainActivity"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#4F178A">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:background="@drawable/test"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:id="@+id/id"
+                android:paddingLeft="10dp"
+                android:hint="아이디"
+                android:textSize="20dp"
+                android:cursorVisible="true"
+                android:background="@drawable/border"
+                />
+            <EditText
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:id="@+id/pwd"
+                android:paddingLeft="10dp"
+                android:hint="비밀번호"
+                android:textSize="20dp"
+                android:cursorVisible="true"
+                android:background="@drawable/border"
+                />
+            <Button
+                android:id="@+id/signin"
+                android:layout_width="190dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:text="Sign in"
+                android:background="#4F178A"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circular_border"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/naver"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circular_border"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/kakao"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circular_border"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/facebook"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

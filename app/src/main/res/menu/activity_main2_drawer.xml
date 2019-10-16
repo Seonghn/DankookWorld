@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="홈" />
+        <item
+            android:id="@+id/cxv"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/notice" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/today" />
+        <item
+            android:id="@+id/sdfsdf"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/qr" />
+        <item
+            android:id="@+id/aas"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/event" />
+        <item
+            android:id="@+id/sfa"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/map" />
+
+    </group>
+
+
+</menu>
