@@ -36,7 +36,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:text="@string/name"
+            android:hint="@string/name"
             tools:layout_editor_absoluteX="73dp"
             tools:layout_editor_absoluteY="435dp" />
 
@@ -45,7 +45,7 @@
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:ems="10"
-            android:text="@string/phone"
+            android:hint="@string/phone"
             tools:layout_editor_absoluteX="72dp"
             tools:layout_editor_absoluteY="496dp" />
 
@@ -55,7 +55,7 @@
             android:layout_height="48dp"
             android:ems="10"
             android:inputType="textPostalAddress"
-            android:text="@string/birthday"
+            android:hint="@string/birthday"
             tools:layout_editor_absoluteX="71dp"
             tools:layout_editor_absoluteY="559dp" />
 
@@ -65,7 +65,7 @@
             android:layout_height="48dp"
             android:ems="10"
             android:inputType="textPostalAddress"
-            android:text="@string/address"
+            android:hint="@string/address"
             tools:layout_editor_absoluteX="71dp"
             tools:layout_editor_absoluteY="559dp" />
 
@@ -76,7 +76,7 @@
             android:layout_marginTop="30dp"
             android:ems="10"
             android:inputType="textPostalAddress"
-            android:text="@string/id"
+            android:hint="@string/id"
             tools:layout_editor_absoluteX="73dp"
             tools:layout_editor_absoluteY="227dp" />
 
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:text="@string/password2"
+            android:hint="@string/password2"
             tools:layout_editor_absoluteX="73dp"
             tools:layout_editor_absoluteY="288dp" />
 
@@ -96,7 +96,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:text="@string/password2"
+            android:hint="@string/password2"
             tools:layout_editor_absoluteX="73dp"
             tools:layout_editor_absoluteY="288dp" />
 

@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.example.dankookworld.ui.map.map;
 
-public class mapActivity2 extends AppCompatActivity {
+public class MapActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

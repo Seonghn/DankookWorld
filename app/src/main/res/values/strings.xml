@@ -15,7 +15,7 @@
     <string name="birthday"> 생년월일</string>
     <string name="address"> 주소</string>
     <string name="password1"> 비밀번호 확인</string>
-   <string name="password2">●●●●●●●</string>
+    <string name="password2">●●●●●●●</string>
 
     // 햄버거
     <string name="today">오늘의 LAND</string>
@@ -55,6 +55,10 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+
+    <string name="mobile">mobile</string>
+    <string name="message">message</string>
+    <string name="direction">direction</string>
 
 
 </resources>
