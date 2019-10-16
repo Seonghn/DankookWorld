@@ -1,3 +1,45 @@
 <resources>
     <string name="app_name">Dankook World</string>
+
+
+   //로그인 및 회원가입
+    <string name="login">로그인</string>
+    <string name="join">회원가입</string>
+    <string name="ID">아이디</string>
+    <string name="PASSWORD">비밀번호</string>
+    <string name="naver">NAVER 로그인하기</string>
+    <string name="kakao">KAKAO 로그인하기</string>
+    <string name="facebook">FACEBOOK 로그인하기</string>
+    <string name="fullname">이름</string>
+    <string name="phone">전화번호</string>
+    <string name="birthday">생년월일</string>
+    <string name="address">주소</string>
+    <string name="confirmpass">비밀번호 확인</string>
+
+    // 햄버거
+    <string name="today">오늘의 LAND</string>
+    <string name="time">운영시간</string>
+    <string name="notice">공지사항</string>
+    <string name="qr">QR 코드</string>
+    <string name="event">이벤트</string>
+    <string name="map">지도</string>
+    <string name="coupon">쿠폰함</string>
+    <string name="setting">설정</string>
+
+    //설정- 개인정보 변경 저장
+    <string name="save">저장하기</string>
+
+    // 지도
+    <string name="wait">대기시간</string>
+    <string name="food">음식점</string>
+    <string name="attraction">어트랙션</string>
+    <string name="store">상점</string>
+
+    // 아이등록
+    <string name="c_register">우리 아이 등록</string>
+    <string name="c_inform">아이의 간단한 정보를 입력해주세요!</string>
+    <string name="register">내 정보 등록</string>
+    <string name="nonmember">비회원은 필수로 입력하여야 합니다.</string>
+
+
 </resources>

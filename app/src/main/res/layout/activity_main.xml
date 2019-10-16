@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="MainActivity"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,16 +64,17 @@
     <LinearLayout
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:background="@drawable/circular_border"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
+        android:background="@drawable/circular_border"
         android:orientation="horizontal">
+
         <ImageView
-            android:layout_marginLeft="20dp"
-            android:layout_gravity="center"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/naver"/>
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/naver" />
     </LinearLayout>
 
     <LinearLayout
