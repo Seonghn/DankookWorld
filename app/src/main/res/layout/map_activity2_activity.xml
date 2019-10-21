@@ -34,11 +34,15 @@
 
                     <ImageButton
                         android:id="@+id/imageButton11"
+                        style="@style/Widget.AppCompat.ImageButton"
                         android:layout_width="80dp"
-                        android:layout_height="80dp"
 
+                        android:layout_height="80dp"
                         android:background="@drawable/cir_border"
-                        app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+                        android:scaleType="centerInside"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/watch"
+                        tools:visibility="visible" />
                     <TextView
                         android:id="@+id/textView3"
                         android:layout_width="wrap_content"
@@ -61,8 +65,10 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
 
+                        android:adjustViewBounds="false"
                         android:background="@drawable/cir_border"
-                        app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/attraction" />
                     <TextView
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
@@ -86,7 +92,8 @@
                         android:layout_height="80dp"
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:background="@drawable/cir_border"
-                        app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/spoon" />
 
                     <TextView
                         android:id="@+id/textView5"
@@ -110,7 +117,8 @@
                         android:layout_height="80dp"
 
                         android:background="@drawable/cir_border"
-                        app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/bag" />
 
                     <TextView
                         android:id="@+id/textView8"
