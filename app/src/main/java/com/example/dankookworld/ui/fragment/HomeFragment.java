@@ -1,22 +1,20 @@
-package com.example.dankookworld.ui.home;
+package com.example.dankookworld.ui.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.support.annotation.Nullable;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
+import android.widget.Button;
+import android.widget.ViewFlipper;
 
 import com.example.dankookworld.R;
 
 public class HomeFragment extends Fragment {
 
 //    private HomeViewModel homeViewModel;
-
+    private ViewFlipper vf;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 //        homeViewModel =
@@ -29,6 +27,23 @@ public class HomeFragment extends Fragment {
 //                textView.setText(s);
 //            }
 //        });
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        vf = view.findViewById(R.id.vf);
+        Button b1 = view.findViewById(R.id.b1);
+        Button b2 = view.findViewById(R.id.b2);
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vf.showPrevious();
+
+            }
+        });
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vf.showNext();
+            }
+        });
+        return view;
     }
 }

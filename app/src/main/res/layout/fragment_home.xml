@@ -1,157 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:context="MainActivity"
-        tools:layout_editor_absoluteY="-125dp">
-
+        android:layout_height="290dp"
+        >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="#4F178A"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:id="@+id/b1"
+                />
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:id="@+id/b2"
+                />
+        </LinearLayout>
+        <ViewFlipper
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            android:id="@+id/vf"
+            >
+            <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="bottom|center"
-                android:text="@string/app_name"
-                android:textColor="@android:color/background_light"
-                android:textSize="40sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
+                android:scaleType="centerCrop"
+                android:id="@+id/iv1"
+                android:background="@drawable/logo"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/iv2"
+                android:background="@drawable/naver"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/iv3"
+                android:background="@drawable/bul"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/iv4"
+                android:background="@drawable/kakao"
+                />
+        </ViewFlipper>
+    </FrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원가입 시 정보등록이 가능해집니다."
+        android:gravity="center"
+        android:textSize="23dp"
+        android:layout_marginBottom="10dp"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/back"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
 
-            <EditText
-                android:id="@+id/id"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/border"
-                android:cursorVisible="true"
-                android:hint="@string/id"
-                android:paddingLeft="10dp"
-                android:textSize="20dp" />
-
-            <EditText
-                android:id="@+id/pwd"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/border"
-                android:cursorVisible="true"
-                android:hint="@string/password"
-                android:paddingLeft="10dp"
-                android:textSize="20dp" />
 
             <Button
-                android:id="@+id/signin"
-                android:layout_width="190dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="40dp"
-                android:background="#4F178A"
-                android:gravity="center"
-                android:text="@string/login"
-                android:textColor="#FFFFFF"
-                android:textSize="20dp" />
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="QR코드 등록"
+                android:background="@drawable/homebuttonboard"/>
+            <Button
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="아이등록"
+                android:background="@drawable/homebuttonboard"/>
+            <Button
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="아이등록"
+                android:background="@drawable/homebuttonboard"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="아이등록"
+                android:background="@drawable/homebuttonboard"/>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/cir_border"
-            android:orientation="horizontal">
+    </FrameLayout>
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/naver" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="208dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/naver" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/cir_border"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/kakao" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="208dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/kakao" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/cir_border"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/facebook" />
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="208dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="@string/facebook" />
-        </LinearLayout>
-
-        <Button
-        android:id="@+id/button"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/recblack_border"
-        android:text="@string/join" />
-
-    </LinearLayout>
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
