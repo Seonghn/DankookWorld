@@ -2,17 +2,11 @@ package com.example.dankookworld;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ViewFlipper;
 
@@ -20,10 +14,6 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
-import com.example.dankookworld.ui.fragment.ImageFragment;
-
-import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
 
