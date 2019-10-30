@@ -10,25 +10,25 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="홈" />
         <item
-            android:id="@+id/cxv"
+            android:id="@+id/nav_notice"
             android:icon="@drawable/ic_menu_manage"
             android:title="@string/notice" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_event"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/today" />
         <item
-            android:id="@+id/sdfsdf"
+            android:id="@+id/nav_find"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/qr" />
         <item
-            android:id="@+id/aas"
+            android:id="@+id/nav_map"
             android:icon="@drawable/ic_menu_manage"
-            android:title="@string/event" />
-        <item
-            android:id="@+id/sfa"
-            android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/map" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="설정" />
 
     </group>
 

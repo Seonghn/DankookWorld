@@ -12,32 +12,32 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.dankookworld.ui.gallery.GalleryFragment"
+        android:id="@+id/nav_notice"
+        android:name="com.example.dankookworld.ui.fragment.NoticeFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_map_at" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.dankookworld.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_event"
+        android:name="com.example.dankookworld.ui.fragment.EventFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_map_at" />
 
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.example.dankookworld.ui.tools.ToolsFragment"
+        android:id="@+id/nav_find"
+        android:name="com.example.dankookworld.ui.fragment.FindFragment"
         android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        tools:layout="@layout/fragment_map_at" />
 
     <fragment
-        android:id="@+id/nav_share"
-        android:name="com.example.dankookworld.ui.share.ShareFragment"
+        android:id="@+id/nav_map"
+        android:name="com.example.dankookworld.ui.fragment.MapFragment"
         android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
+        tools:layout="@layout/fragment_map_at" />
 
     <fragment
-        android:id="@+id/nav_send"
-        android:name="com.example.dankookworld.ui.send.SendFragment"
+        android:id="@+id/nav_setting"
+        android:name="com.example.dankookworld.ui.fragment.SettingFragment"
         android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+        tools:layout="@layout/fragment_map_at" />
 </navigation>
