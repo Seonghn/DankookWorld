@@ -1,9 +1,9 @@
 package com.example.dankookworld.ui.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,15 +37,40 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     }
 
     @Override
-    public void onResume() {
-        mapView.onResume();
-        super.onResume();
+    public void onMapReady(GoogleMap googleMap) {
+
+        mMap = googleMap;
+        LatLng DW = new LatLng(37.322140, 127.126639);
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.position(DW);
+        markerOptions.title("단국대학교");
+        markerOptions.snippet("범정관");
+        mMap.addMarker(markerOptions);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(DW,16));
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
-        mapView.onDestroy();
+    public void onStart() {
+        super.onStart();
+        mapView.onStart();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        mapView.onStop();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mapView.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mapView.onPause();
     }
 
     @Override
@@ -55,19 +80,27 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     }
 
     @Override
-    public void onMapReady(GoogleMap googleMap) {
-
-        MapsInitializer.initialize(this.getActivity());
-
-        // Updates the location and zoom of the MapView
-        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(35.141233, 126.925594), 14);
-
-        googleMap.animateCamera(cameraUpdate);
-
-        googleMap.addMarker(new MarkerOptions()
-                .position(new LatLng(35.141233, 126.925594))
-                .title("루프리코리아"));
-
+    public void onDestroy() {
+        super.onDestroy();
+        mapView.onLowMemory();
     }
+
+//    @Override
+//    public void onSaveInstanceState(Bundle outState) {
+//        super.onSaveInstanceState(outState);
+//        mapView.onSaveInstanceState(outState);
+//    }
+////
+//    @Override
+//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+//        super.onActivityCreated(savedInstanceState);
+//
+//        //액티비티가 처음 생성될 때 실행되는 함수
+//
+//        if (mapView != null) {
+//            mapView.onCreate(savedInstanceState);
+//        }
+//    }
+
 }
 
