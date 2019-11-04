@@ -1,5 +1,6 @@
 package com.example.dankookworld;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.content.ContextCompat;
@@ -7,7 +8,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import androidx.navigation.NavController;
@@ -15,11 +19,15 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class HomeActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ViewFlipper vf;
     private Button b1,b2;
+    private FirebaseAuth firebaseAuth;
+    TextView userName, userEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +50,27 @@ public class HomeActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-
+        firebaseAuth = FirebaseAuth.getInstance();
+        View view = navigationView.getHeaderView(0);
+        userName = view.findViewById(R.id.userName);
+        userEmail = view.findViewById(R.id.userEmail);
+        userName.setText(firebaseAuth.getCurrentUser().getDisplayName());
+        userEmail.setText(firebaseAuth.getCurrentUser().getEmail());
 
     }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.logout:
+                firebaseAuth.signOut();
+                finish();
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

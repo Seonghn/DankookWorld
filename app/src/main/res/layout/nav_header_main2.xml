@@ -32,14 +32,14 @@
         android:layout_marginLeft="20dp"
         android:gravity="center">
         <TextView
-            android:id="@+id/sdfdsfdsf"
+            android:id="@+id/userName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
             android:text="이건 코딩으로"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
         <TextView
-            android:id="@+id/sdfdsfdsfdsfdsf"
+            android:id="@+id/userEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="이건 코딩으로" />

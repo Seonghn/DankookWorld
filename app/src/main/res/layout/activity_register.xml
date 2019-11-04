@@ -32,7 +32,8 @@
             tools:layout_editor_absoluteY="376dp" />
 
         <EditText
-            android:id="@+id/editText20"
+            android:singleLine="true"
+            android:id="@+id/name"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -41,7 +42,8 @@
             tools:layout_editor_absoluteY="435dp" />
 
         <EditText
-            android:id="@+id/editText"
+            android:singleLine="true"
+            android:id="@+id/phone"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:ems="10"
@@ -50,7 +52,8 @@
             tools:layout_editor_absoluteY="496dp" />
 
         <EditText
-            android:id="@+id/editText25"
+            android:singleLine="true"
+            android:id="@+id/birth"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:ems="10"
@@ -60,7 +63,8 @@
             tools:layout_editor_absoluteY="559dp" />
 
         <EditText
-            android:id="@+id/editText21"
+            android:singleLine="true"
+            android:id="@+id/address"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:ems="10"
@@ -70,7 +74,8 @@
             tools:layout_editor_absoluteY="559dp" />
 
         <EditText
-            android:id="@+id/editText6"
+            android:singleLine="true"
+            android:id="@+id/insertId"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -81,17 +86,8 @@
             tools:layout_editor_absoluteY="227dp" />
 
         <EditText
-            android:id="@+id/editText8"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:hint="@string/password2"
-            tools:layout_editor_absoluteX="73dp"
-            tools:layout_editor_absoluteY="288dp" />
-
-        <EditText
-            android:id="@+id/editText9"
+            android:singleLine="true"
+            android:id="@+id/insertPwd"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -101,7 +97,7 @@
             tools:layout_editor_absoluteY="288dp" />
 
         <Button
-            android:id="@+id/submit"
+            android:id="@+id/register"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_marginTop="80dp"
