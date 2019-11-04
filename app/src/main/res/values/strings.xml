@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Dankook World</string>
-
+    <string name="hw">회원</string>
+    <string name="bhw">비회원</string>
+    <string name="information">회원가입시 정보등록이 가능해집니다.</string>
 
     //로그인 및 회원가입
     <string name="login">로그인</string>

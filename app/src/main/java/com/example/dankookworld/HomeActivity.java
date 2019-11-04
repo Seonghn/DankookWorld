@@ -24,8 +24,6 @@ import com.google.firebase.auth.FirebaseAuth;
 public class HomeActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private ViewFlipper vf;
-    private Button b1,b2;
     private FirebaseAuth firebaseAuth;
     TextView userName, userEmail;
 
@@ -52,10 +50,13 @@ public class HomeActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         View view = navigationView.getHeaderView(0);
-        userName = view.findViewById(R.id.userName);
-        userEmail = view.findViewById(R.id.userEmail);
-        userName.setText(firebaseAuth.getCurrentUser().getDisplayName());
-        userEmail.setText(firebaseAuth.getCurrentUser().getEmail());
+        if(firebaseAuth.getCurrentUser() != null){
+            userName = view.findViewById(R.id.userName);
+            userEmail = view.findViewById(R.id.userEmail);
+            userName.setText(firebaseAuth.getCurrentUser().getDisplayName());
+            userEmail.setText(firebaseAuth.getCurrentUser().getEmail());
+        }
+
 
     }
 

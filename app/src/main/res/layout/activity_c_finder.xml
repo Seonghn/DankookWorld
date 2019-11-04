@@ -38,19 +38,10 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/sdfdsfdsf"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="@dimen/nav_header_vertical_spacing"
-                    android:text="이건 코딩으로"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@color/cardview_light_background" />
-
-                <TextView
                     android:id="@+id/sdfdsfdsfdsfdsf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="이건 코딩으로"
+                    android:text="coding"
                     android:textColor="@color/cardview_light_background" />
             </LinearLayout>
         </LinearLayout>
@@ -82,7 +73,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/sdfdsfdsf"
+                    android:id="@+id/text1"
                     android:layout_width="94dp"
                     android:layout_height="38dp"
                     android:gravity="right"
@@ -126,7 +117,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/sdfdsfdsf"
+                    android:id="@+id/text1"
                     android:layout_width="94dp"
                     android:layout_height="38dp"
                     android:gravity="right"
@@ -168,7 +159,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/sdfdsfdsf"
+                    android:id="@+id/text1"
                     android:layout_width="94dp"
                     android:layout_height="38dp"
                     android:gravity="right"
@@ -206,7 +197,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/sdfdsfdsf"
+                    android:id="@+id/text1"
                     android:layout_width="94dp"
                     android:layout_height="38dp"
                     android:gravity="right"
