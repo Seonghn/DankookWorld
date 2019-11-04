@@ -1,28 +1,38 @@
 package com.example.dankookworld;
 
 import android.app.ProgressDialog;
+import android.content.ClipData;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.annotation.Nullable;
+
 public class RegisterActivity extends AppCompatActivity {
 
+    private ArrayList<ClipData.Item> list;
     EditText name, phone, birth, address, insertId, insertPwd;
     Button register;
     FirebaseAuth firebaseAuth;
@@ -78,6 +88,15 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+//                    String u1 = firebaseAuth.getUid();
+//                    String email = insertId.getText().toString();
+                    String email = insertId.getText().toString();
+                    Map<String, Object> dataToSave = new HashMap<>();
+                    dataToSave.put("Address", name.getText().toString());
+                    dataToSave.put("Birth",phone.getText().toString());
+                    dataToSave.put("Name", birth.getText().toString());
+                    dataToSave.put("Phone", address.getText().toString());
+                    firebaseFirestore.collection("user").document(email).set(dataToSave);
                     finish();
                     startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 } else {
@@ -86,15 +105,11 @@ public class RegisterActivity extends AppCompatActivity {
                 progressDialog.dismiss();
             }
         });
-        String email = insertId.toString();
-        Map<String, Object> dataToSave = new HashMap<>();
-        dataToSave.put(Name, name.getText().toString());
-        dataToSave.put(Phone,phone.getText().toString());
-        dataToSave.put(Birth, birth.getText().toString());
-        dataToSave.put(Address, address.getText().toString());
-        firebaseFirestore.collection("/user").document(email).set(dataToSave);
-    }
 
+
+
+
+    }
 
 }
 
