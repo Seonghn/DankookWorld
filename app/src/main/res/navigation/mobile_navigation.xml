@@ -15,19 +15,19 @@
         android:id="@+id/nav_notice"
         android:name="com.example.dankookworld.ui.fragment.NoticeFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_map_at" />
+        tools:layout="@layout/fragment_notice" />
 
     <fragment
         android:id="@+id/nav_event"
         android:name="com.example.dankookworld.ui.fragment.EventFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_map_at" />
+        tools:layout="@layout/fragment_event" />
 
     <fragment
         android:id="@+id/nav_find"
         android:name="com.example.dankookworld.ui.fragment.FindFragment"
         android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_map_at" />
+        tools:layout="@layout/fragment_find" />
 
     <fragment
         android:id="@+id/nav_map"
@@ -39,5 +39,5 @@
         android:id="@+id/nav_setting"
         android:name="com.example.dankookworld.ui.fragment.SettingFragment"
         android:label="@string/menu_send"
-        tools:layout="@layout/fragment_map_at" />
+        tools:layout="@layout/fragment_setting" />
 </navigation>

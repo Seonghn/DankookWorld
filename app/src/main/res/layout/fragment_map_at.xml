@@ -143,12 +143,10 @@
                 android:background="@android:color/darker_gray" />
         </LinearLayout>
     </FrameLayout>
-    <fragment
+    <com.google.android.gms.maps.MapView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.MapFragment"
         android:id="@+id/map"
-
         />
-
 </LinearLayout>
