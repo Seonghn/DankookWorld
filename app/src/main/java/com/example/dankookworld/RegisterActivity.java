@@ -92,10 +92,10 @@ public class RegisterActivity extends AppCompatActivity {
 //                    String email = insertId.getText().toString();
                     String email = insertId.getText().toString();
                     Map<String, Object> dataToSave = new HashMap<>();
-                    dataToSave.put("Address", name.getText().toString());
-                    dataToSave.put("Birth",phone.getText().toString());
-                    dataToSave.put("Name", birth.getText().toString());
-                    dataToSave.put("Phone", address.getText().toString());
+                    dataToSave.put("Address", address.getText().toString());
+                    dataToSave.put("Birth",birth.getText().toString());
+                    dataToSave.put("Name", name.getText().toString());
+                    dataToSave.put("Phone", phone.getText().toString());
                     firebaseFirestore.collection("user").document(email).set(dataToSave);
                     finish();
                     startActivity(new Intent(getApplicationContext(), LoginActivity.class));
