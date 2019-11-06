@@ -9,7 +9,7 @@
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
         tools:context=".MapActivity">
 
         <LinearLayout
@@ -21,7 +21,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
-                android:layout_marginTop="100dp"
                 android:background="#C18CDB"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -34,10 +33,9 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/imageButton11"
+                        android:id="@+id/wtB"
                         style="@style/Widget.AppCompat.ImageButton"
                         android:layout_width="80dp"
-
                         android:layout_height="80dp"
                         android:background="@drawable/cir_border"
                         android:scaleType="centerInside"
@@ -63,7 +61,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/imageButton12"
+                        android:id="@+id/atB"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
 
@@ -90,7 +88,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/imageButton16"
+                        android:id="@+id/foB"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_gravity="center_horizontal|center_vertical"
@@ -116,7 +114,7 @@
                     android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/imageButton15"
+                        android:id="@+id/stB"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
 
@@ -138,15 +136,20 @@
             <include
                 layout="@layout/content_main2"
                 android:layout_width="match_parent"
-                android:layout_height="560dp"
+                android:layout_height="20dp"
                 android:layout_gravity="bottom"
                 android:background="@android:color/darker_gray" />
         </LinearLayout>
     </FrameLayout>
-    <com.google.android.gms.maps.MapView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.google.android.gms.maps.MapFragment"
-        android:id="@+id/map"
-        />
+        android:layout_height="match_parent">
+        <com.google.android.gms.maps.MapView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:id="@+id/map"
+            />
+    </FrameLayout>
+
 </LinearLayout>

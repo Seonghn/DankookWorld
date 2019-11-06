@@ -34,28 +34,28 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:id="@+id/iv1"
-                android:background="@drawable/logo"
+                android:background="@drawable/ho"
                 />
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:id="@+id/iv2"
-                android:background="@drawable/naver"
+                android:background="@drawable/ho2"
                 />
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:id="@+id/iv3"
-                android:background="@drawable/bul"
+                android:background="@drawable/logo"
                 />
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:id="@+id/iv4"
-                android:background="@drawable/kakao"
+                android:background="@drawable/ho3"
                 />
         </ViewFlipper>
     </FrameLayout>

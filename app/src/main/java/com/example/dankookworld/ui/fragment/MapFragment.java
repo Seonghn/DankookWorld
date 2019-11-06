@@ -46,7 +46,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         markerOptions.title("단국대학교");
         markerOptions.snippet("범정관");
         mMap.addMarker(markerOptions);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(DW,16));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(DW,17));
     }
 
     @Override
