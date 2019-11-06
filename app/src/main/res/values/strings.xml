@@ -1,4 +1,4 @@
-<resources>
+﻿<resources>
     <string name="app_name">Dankook World</string>
     <string name="hw">회원</string>
     <string name="bhw">비회원</string>
@@ -28,6 +28,33 @@
     <string name="map">지도</string>
     <string name="coupon">쿠폰함</string>
     <string name="setting">설정</string>
+
+//food1
+    <string name="restaurant_1">니뽕내뽕</string>
+    <string name="explain_res1">다양한 퓨전 짬뽕 및 피자가 준비되어있습니다.</string>
+    <string name="pop_menu">대표메뉴</string>
+    <string name="time_res1">AM10:00 ~ PM08:00</string>
+    <string name="pop_menu_res1">크림짬뽕, 로제짬뽕, 고구마피자</string>
+    <string name="phone_res1">02-9376-1111</string>
+    //food2
+    <string name="restaurant_2">McDonalds</string>
+    <string name="explain_res2">다양한 햄버거 세트가 준비되어있습니다.</string>
+    <string name="time_res2">AM10:00 ~ PM09:30</string>
+    <string name="pop_menu_res2">빅맥, 상하이버거, 1955버거</string>
+    <string name="phone_res2">1544-1111</string>
+    //food3
+    <string name="restaurant_3">베트남노상식당</string>
+    <string name="explain_res3">퓨전 베트남 음식이 준비되어있습니다.</string>
+    <string name="time_res3">AM10:00 ~ PM08:30</string>
+    <string name="pop_menu_res3">양지 쌀국수, 분짜, 월남쌈</string>
+    <string name="phone_res3">02-2661-1234</string>
+    //food4
+    <string name="restaurant_4">GS25</string>
+    <string name="explain_res4">다양한 생필품 및 도시락이 준비되어있습니다.</string>
+    <string name="time_res4">AM9:30 ~ PM11:00</string>
+    <string name="pop_menu_res4">생수, 음료, 도시락, 샌드위치</string>
+    <string name="phone_res4">02-2662-2222</string>
+
 
     //설정- 개인정보 변경 저장
     <string name="save">저장하기</string>
