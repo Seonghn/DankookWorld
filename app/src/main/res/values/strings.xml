@@ -62,5 +62,9 @@
     <string name="message">message</string>
     <string name="direction">direction</string>
 
+    <string name="change_save">save changes</string>
+
+    <string name="notice_name">작성자</string>
+    <string name="notice_date">2019-11-06</string>
 
 </resources>

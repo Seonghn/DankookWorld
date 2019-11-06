@@ -1,115 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="290dp"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <Button
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:id="@+id/b1"
-                />
-            <Button
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:id="@+id/b2"
-                />
-        </LinearLayout>
-        <ViewFlipper
-            android:layout_width="match_parent"
-            android:layout_height="290dp"
-            android:id="@+id/vf"
-            >
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:id="@+id/iv1"
-                android:background="@drawable/logo"
-                />
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:id="@+id/iv2"
-                android:background="@drawable/naver"
-                />
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:id="@+id/iv3"
-                android:background="@drawable/bul"
-                />
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:id="@+id/iv4"
-                android:background="@drawable/kakao"
-                />
-        </ViewFlipper>
-    </FrameLayout>
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_2"
+    android:gravity="center"
+    android:orientation="vertical">
+
     <TextView
+        android:id="@+id/textView12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="회원가입 시 정보등록이 가능해집니다."
-        android:gravity="center"
-        android:textSize="23dp"
+        android:layout_marginTop="150dp"
         android:layout_marginBottom="10dp"
-        />
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/back"/>
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="500dp"
+        android:background="@android:color/background_light"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:layout_height="58dp"
+            android:layout_marginTop="30sp"
             android:gravity="center"
-            >
+            android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20sp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/name"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
 
-            <Button
-                android:layout_marginBottom="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:text="QR코드 등록"
-                android:background="@drawable/homebuttonboard"/>
-            <Button
-                android:layout_marginBottom="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:text="아이등록"
-                android:background="@drawable/homebuttonboard"/>
-            <Button
-                android:layout_marginBottom="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:text="아이등록"
-                android:background="@drawable/homebuttonboard"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:text="아이등록"
-                android:background="@drawable/homebuttonboard"/>
-
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50sp"
+                android:ems="10"
+                android:hint="@string/name"
+                android:singleLine="true" />
         </LinearLayout>
 
-    </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20sp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/birthday"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/birth"
+                android:layout_width="200dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="50sp"
+                android:ems="10"
+                android:hint="@string/birthday"
+                android:inputType="textPostalAddress"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20sp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/phone"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="200dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="50sp"
+                android:ems="10"
+                android:hint="@string/phone"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20sp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/address"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="200dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="50sp"
+                android:ems="10"
+                android:hint="@string/address"
+                android:inputType="textPostalAddress"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:layout_marginRight="20sp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/id"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/insertId"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:layout_marginRight="50sp"
+                android:ems="10"
+                android:hint="@string/id"
+                android:inputType="textPostalAddress"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20sp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/password"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/insertPwd"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50sp"
+                android:ems="10"
+                android:hint="@string/password2"
+                android:inputType="number"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="15sp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/password1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/insertPwdd"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50sp"
+                android:ems="10"
+                android:hint="@string/password2"
+                android:inputType="number"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="412dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="10sp"
+            android:background="@color/purple"
+            android:text="@string/change_save" />
+
+
+    </LinearLayout>
 
 </LinearLayout>
