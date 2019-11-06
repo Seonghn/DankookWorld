@@ -11,7 +11,7 @@
         android:id="@+id/textView12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="200sp"
         android:layout_marginBottom="10dp"
         android:gravity="center"
         android:text="@string/app_name"
@@ -22,7 +22,7 @@
 
     <LinearLayout
         android:layout_width="380dp"
-        android:layout_height="585dp"
+        android:layout_height="wrap_content"
         android:background="@android:color/background_light"
         android:gravity="center"
         android:orientation="vertical">
@@ -199,6 +199,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="60sp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -223,16 +224,17 @@
                 android:hint="@string/password2"
                 android:inputType="number"
                 android:singleLine="true" />
+
         </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="412dp"
+            android:layout_height="60dp"
+            android:background="@color/purple"
+            android:text="@string/change_save" />
 
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="412dp"
-        android:layout_height="60dp"
-        android:background="@color/purple"
-        android:text="@string/change_save" />
 
 </LinearLayout>
