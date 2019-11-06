@@ -133,23 +133,23 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <include
-                layout="@layout/content_main2"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_gravity="bottom"
-                android:background="@android:color/darker_gray" />
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="20dp"
+               android:background="#8D78A2"
+               />
         </LinearLayout>
     </FrameLayout>
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <com.google.android.gms.maps.MapView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:name="com.google.android.gms.maps.MapFragment"
-            android:id="@+id/map"
-            />
+        android:layout_height="match_parent"
+        android:id="@+id/mapFrame">
+<!--        <com.google.android.gms.maps.MapView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:name="com.google.android.gms.maps.MapFragment"-->
+<!--            android:id="@+id/map"-->
+<!--            />-->
     </FrameLayout>
 
 </LinearLayout>
