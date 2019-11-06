@@ -73,8 +73,8 @@ public class HomeActivity extends AppCompatActivity {
 
         userName = view.findViewById(R.id.userName);
         userEmail = view.findViewById(R.id.userEmail);
-        userName.setText("ee");
-        userEmail.setText("dd");
+        userName.setText("비회원 입니다.");
+        userEmail.setText("                              ");
 
 //==========파이어베이스 데이터 가져오는거===================//
         if(firebaseAuth.getCurrentUser() != null){
