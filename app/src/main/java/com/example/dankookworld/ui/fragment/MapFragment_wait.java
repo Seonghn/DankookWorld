@@ -1,20 +1,33 @@
 package com.example.dankookworld.ui.fragment;
 
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.dankookworld.R;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
+
+import static androidx.constraintlayout.widget.Constraints.TAG;
 
 public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
 
@@ -44,7 +57,25 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
         markerOptions.title("단국대학교");
         markerOptions.snippet("범정관");
         mMap.addMarker(markerOptions);
+
+        LatLng l1 = new LatLng(37.322661, 127.127171);
+        MarkerOptions m1 = new MarkerOptions();
+        m1.position(l1);
+        m1.title("오예");
+        mMap.addMarker(m1);
+
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(DW,17));
+        mMap.setMyLocationEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
+
+
+//        mMap.setOnMyLocationButtonClickListener(new GoogleMap.OnMyLocationButtonClickListener(){
+//            @Override
+//            public boolean onMyLocationButtonClick() {
+//                mMoveMapByAPI = true;
+//                return true;
+//            }
+//        });
     }
 
     @Override

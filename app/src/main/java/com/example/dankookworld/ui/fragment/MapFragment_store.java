@@ -38,13 +38,15 @@ public class MapFragment_store extends Fragment implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
 
         mMap = googleMap;
-        LatLng DW = new LatLng(37.322140, 127.126639);
+        LatLng DW = new LatLng(37.322643, 127.125072);
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(DW);
         markerOptions.title("단국대학교");
         markerOptions.snippet("범정관");
         mMap.addMarker(markerOptions);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(DW,17));
+        mMap.setMyLocationEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
     }
 
     @Override

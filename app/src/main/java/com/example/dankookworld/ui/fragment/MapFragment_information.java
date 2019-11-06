@@ -16,7 +16,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapFragment_attraction extends Fragment implements OnMapReadyCallback {
+public class MapFragment_information extends Fragment implements OnMapReadyCallback {
 
     GoogleMap mMap;
     private MapView mapView;
@@ -45,6 +45,8 @@ public class MapFragment_attraction extends Fragment implements OnMapReadyCallba
         markerOptions.snippet("범정관");
         mMap.addMarker(markerOptions);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(DW,17));
+        mMap.setMyLocationEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
     }
 
     @Override
