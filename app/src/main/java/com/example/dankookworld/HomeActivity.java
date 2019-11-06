@@ -2,7 +2,13 @@ package com.example.dankookworld;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+
+import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,12 +24,25 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.auth.User;
+
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private FirebaseAuth firebaseAuth;
+    private FirebaseFirestore firebaseFirestore;
     TextView userName, userEmail;
+    DocumentChange documentChange;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,18 +65,35 @@ public class HomeActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
+        firebaseFirestore = FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
+
+
         View view = navigationView.getHeaderView(0);
+
+        userName = view.findViewById(R.id.userName);
+        userEmail = view.findViewById(R.id.userEmail);
+        userName.setText("ee");
+        userEmail.setText("dd");
+
+//==========파이어베이스 데이터 가져오는거===================//
         if(firebaseAuth.getCurrentUser() != null){
-            userName = view.findViewById(R.id.userName);
-            userEmail = view.findViewById(R.id.userEmail);
-            userName.setText(firebaseAuth.getCurrentUser().getDisplayName());
-            userEmail.setText(firebaseAuth.getCurrentUser().getEmail());
-        }
-
-
+            String userI = firebaseAuth.getCurrentUser().getEmail();
+            DocumentReference docRef = firebaseFirestore.collection("user").document(userI);
+            docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                    if (task.isSuccessful()) {
+                        DocumentSnapshot document = task.getResult();
+                        if (document != null) {
+                            userName.setText(document.getString("Name"));
+                        }
+                    }
+                }
+        });
+        userEmail.setText(userI);
     }
-
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
