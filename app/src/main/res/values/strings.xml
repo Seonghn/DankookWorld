@@ -94,4 +94,8 @@
     <string name="notice_name">작성자</string>
     <string name="notice_date">2019-11-06</string>
 
+
+    <string name="event_time">2019-12-01 20:00</string>
+    <string name="event_location">자이로스윙 앞</string>
+    <string name="event_name">유령들의 댄스배틀</string>
 </resources>
