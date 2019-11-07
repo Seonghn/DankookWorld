@@ -18,11 +18,11 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_gravity="center"
-            android:background="@color/purple_2"
+            android:background="@color/purple2"
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/user1"
+                android:id="@+id/profile"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
@@ -57,7 +57,7 @@
             android:gravity="left">
 
             <ImageView
-                android:id="@+id/user1"
+                android:id="@+id/phone_f"
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="left"
@@ -73,7 +73,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/text1"
+                    android:id="@+id/phone_text"
                     android:layout_width="94dp"
                     android:layout_height="38dp"
                     android:gravity="right"
@@ -101,7 +101,7 @@
             android:foregroundGravity="center">
 
             <ImageView
-                android:id="@+id/user1"
+                android:id="@+id/text_f"
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="left"
@@ -117,7 +117,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/text1"
+                    android:id="@+id/text_text"
                     android:layout_width="94dp"
                     android:layout_height="38dp"
                     android:gravity="right"
@@ -144,7 +144,7 @@
             android:foregroundGravity="center">
 
             <ImageView
-                android:id="@+id/user1"
+                android:id="@+id/info_f"
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
@@ -159,7 +159,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/text1"
+                    android:id="@+id/info_text"
                     android:layout_width="94dp"
                     android:layout_height="38dp"
                     android:gravity="right"

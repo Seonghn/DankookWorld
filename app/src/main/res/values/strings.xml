@@ -30,30 +30,30 @@
     <string name="setting">설정</string>
 
 //food1
-    <string name="restaurant_1">니뽕내뽕</string>
-    <string name="explain_res1">다양한 퓨전 짬뽕 및 피자가 준비되어있습니다.</string>
-    <string name="pop_menu">대표메뉴</string>
-    <string name="time_res1">AM10:00 ~ PM08:00</string>
-    <string name="pop_menu_res1">크림짬뽕, 로제짬뽕, 고구마피자</string>
-    <string name="phone_res1">02-9376-1111</string>
+    <string name="restaurant1">니뽕내뽕</string>
+    <string name="explainres1">다양한 퓨전 짬뽕 및 피자가 준비되어있습니다.</string>
+    <string name="popmenu">대표메뉴</string>
+    <string name="timeres1">AM10:00 ~ PM08:00</string>
+    <string name="popmenures1">크림짬뽕, 로제짬뽕, 고구마피자</string>
+    <string name="phoneres1">02-9376-1111</string>
     //food2
-    <string name="restaurant_2">McDonalds</string>
-    <string name="explain_res2">다양한 햄버거 세트가 준비되어있습니다.</string>
-    <string name="time_res2">AM10:00 ~ PM09:30</string>
-    <string name="pop_menu_res2">빅맥, 상하이버거, 1955버거</string>
-    <string name="phone_res2">1544-1111</string>
+    <string name="restaurant2">McDonalds</string>
+    <string name="explainres2">다양한 햄버거 세트가 준비되어있습니다.</string>
+    <string name="timeres2">AM10:00 ~ PM09:30</string>
+    <string name="popmenures2">빅맥, 상하이버거, 1955버거</string>
+    <string name="phoneres2">1544-1111</string>
     //food3
-    <string name="restaurant_3">베트남노상식당</string>
-    <string name="explain_res3">퓨전 베트남 음식이 준비되어있습니다.</string>
-    <string name="time_res3">AM10:00 ~ PM08:30</string>
-    <string name="pop_menu_res3">양지 쌀국수, 분짜, 월남쌈</string>
-    <string name="phone_res3">02-2661-1234</string>
+    <string name="restaurant3">베트남노상식당</string>
+    <string name="explainres3">퓨전 베트남 음식이 준비되어있습니다.</string>
+    <string name="timeres3">AM10:00 ~ PM08:30</string>
+    <string name="popmenures3">양지 쌀국수, 분짜, 월남쌈</string>
+    <string name="phoneres3">02-2661-1234</string>
     //food4
-    <string name="restaurant_4">GS25</string>
-    <string name="explain_res4">다양한 생필품 및 도시락이 준비되어있습니다.</string>
-    <string name="time_res4">AM9:30 ~ PM11:00</string>
-    <string name="pop_menu_res4">생수, 음료, 도시락, 샌드위치</string>
-    <string name="phone_res4">02-2662-2222</string>
+    <string name="restaurant4">GS25</string>
+    <string name="explainres4">다양한 생필품 및 도시락이 준비되어있습니다.</string>
+    <string name="timeres4">AM9:30 ~ PM11:00</string>
+    <string name="popmenures4">생수, 음료, 도시락, 샌드위치</string>
+    <string name="phoneres4">02-2662-2222</string>
 
 
     //설정- 개인정보 변경 저장
@@ -66,36 +66,36 @@
     <string name="store">상점</string>
 
     // 아이등록
-    <string name="c_register">우리 아이 등록</string>
-    <string name="c_inform">아이의 간단한 정보를 입력해주세요!</string>
+    <string name="cregister">우리 아이 등록</string>
+    <string name="cinform">아이의 간단한 정보를 입력해주세요!</string>
     <string name="register">내 정보 등록</string>
     <string name="nonmember">비회원은 필수로 입력하여야 합니다.</string>
-    <string name="title_activity_main2">Main2Activity</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="titleactivitymain2">Main2Activity</string>
+    <string name="navigationdraweropen">Open navigation drawer</string>
+    <string name="navigationdrawerclose">Close navigation drawer</string>
+    <string name="navheadertitle">Android Studio</string>
+    <string name="navheadersubtitle">android.studio@android.com</string>
+    <string name="navheaderdesc">Navigation header</string>
+    <string name="actionsettings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
+    <string name="menuhome">Home</string>
+    <string name="menugallery">Gallery</string>
+    <string name="menuslideshow">Slideshow</string>
+    <string name="menutools">Tools</string>
+    <string name="menushare">Share</string>
+    <string name="menusend">Send</string>
 
     <string name="mobile">mobile</string>
     <string name="message">message</string>
     <string name="direction">direction</string>
 
-    <string name="change_save">save changes</string>
+    <string name="changesave">save changes</string>
 
-    <string name="notice_name">작성자</string>
-    <string name="notice_date">2019-11-06</string>
+    <string name="noticename">작성자</string>
+    <string name="noticedate">2019-11-06</string>
 
 
-    <string name="event_time">2019-12-01 20:00</string>
-    <string name="event_location">자이로스윙 앞</string>
-    <string name="event_name">유령들의 댄스배틀</string>
+    <string name="eventtime">2019-12-01 20:00</string>
+    <string name="eventlocation">자이로스윙 앞</string>
+    <string name="eventname">유령들의 댄스배틀</string>
 </resources>
