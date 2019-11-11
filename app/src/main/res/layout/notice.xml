@@ -31,7 +31,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="8dp"
                 android:padding="3dp"
-                android:text="@string/notice_name"
+                android:text="@string/noticename"
                 android:textColor="#ffffff"
                 android:textColorHint="#ffffff" />
 
@@ -42,7 +42,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="100sp"
                 android:padding="3dp"
-                android:text="@string/notice_date"
+                android:text="@string/noticedate"
                 android:textColor="#ffffff"
                 android:textColorHint="#ffffff" />
         </LinearLayout>

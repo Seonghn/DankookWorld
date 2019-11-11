@@ -65,7 +65,7 @@
             android:layout_height="43dp"
             android:layout_marginTop="50dp"
             android:gravity="center_horizontal"
-            android:text="@string/c_register"
+            android:text="@string/cregister"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -77,7 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="@string/c_inform" />
+            android:text="@string/cinform" />
 
         <EditText
             android:id="@+id/editText6"

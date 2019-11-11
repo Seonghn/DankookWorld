@@ -26,7 +26,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:contentDescription="@string/nav_header_desc"
+                android:contentDescription="@string/navheaderdesc"
                 android:paddingTop="@dimen/nav_header_vertical_spacing"
                 app:srcCompat="@drawable/user" />
 
@@ -62,7 +62,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="left"
                 android:layout_marginLeft="20dp"
-                android:contentDescription="@string/nav_header_desc"
+                android:contentDescription="@string/navheaderdesc"
                 android:paddingTop="@dimen/nav_header_vertical_spacing"
                 app:srcCompat="@android:drawable/stat_sys_phone_call" />
 
@@ -106,7 +106,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="left"
                 android:layout_marginLeft="20dp"
-                android:contentDescription="@string/nav_header_desc"
+                android:contentDescription="@string/navheaderdesc"
                 android:paddingTop="@dimen/nav_header_vertical_spacing"
                 app:srcCompat="@android:drawable/ic_dialog_email" />
 
@@ -148,7 +148,7 @@
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="20dp"
-                android:contentDescription="@string/nav_header_desc"
+                android:contentDescription="@string/navheaderdesc"
                 android:paddingTop="@dimen/nav_header_vertical_spacing"
                 app:srcCompat="@android:drawable/ic_dialog_info" />
 
@@ -186,7 +186,7 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="left"
                 android:layout_marginLeft="20dp"
-                android:contentDescription="@string/nav_header_desc"
+                android:contentDescription="@string/navheaderdesc"
                 android:paddingTop="@dimen/nav_header_vertical_spacing"
                 app:srcCompat="@android:drawable/ic_dialog_dialer" />
 

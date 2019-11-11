@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:gravity="center"
-                android:text="@string/restaurant_4"
+                android:text="@string/restaurant4"
                 android:textColor="@android:color/black"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -40,7 +40,7 @@
                 android:layout_width="415dp"
                 android:layout_height="40dp"
                 android:gravity="center"
-                android:text="@string/explain_res4"
+                android:text="@string/explainres4"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 />
@@ -59,7 +59,7 @@
                 android:layout_width="100dp"
                 android:layout_height="55dp"
                 android:gravity="left"
-                android:text="@string/pop_menu"
+                android:text="@string/popmenu"
                 android:textColor="@color/purple"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -71,7 +71,7 @@
                 android:layout_width="250dp"
                 android:layout_height="70dp"
                 android:gravity="center"
-                android:text="@string/pop_menu_res4"
+                android:text="@string/popmenures4"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 />
@@ -102,7 +102,7 @@
                 android:layout_width="250dp"
                 android:layout_height="70dp"
                 android:gravity="center"
-                android:text="@string/time_res4"
+                android:text="@string/timeres4"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 />
@@ -133,7 +133,7 @@
                 android:layout_width="250dp"
                 android:layout_height="70dp"
                 android:gravity="center"
-                android:text="@string/phone_res4"
+                android:text="@string/phoneres4"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 />
