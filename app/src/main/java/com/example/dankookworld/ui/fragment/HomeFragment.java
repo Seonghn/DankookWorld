@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ViewFlipper;
 
-import com.example.dankookworld.LoginActivity;
-import com.example.dankookworld.MainActivity;
 import com.example.dankookworld.QRActivity;
 import com.example.dankookworld.R;
 
@@ -54,7 +52,7 @@ public class HomeFragment extends Fragment {
 
 
 
-        Button qr_register = view.findViewById(R.id.qr_register);
+        Button qr_register = view.findViewById(R.id.qr_scan);
         qr_register.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
