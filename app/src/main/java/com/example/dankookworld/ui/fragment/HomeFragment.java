@@ -4,17 +4,20 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import android.widget.Button;
 import android.widget.ViewFlipper;
 
 import com.example.dankookworld.R;
+import com.google.zxing.integration.android.IntentIntegrator;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 public class HomeFragment extends Fragment {
 
-//    private HomeViewModel homeViewModel;
+    //    private HomeViewModel homeViewModel;
     private ViewFlipper vf;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 //        homeViewModel =
@@ -27,10 +30,11 @@ public class HomeFragment extends Fragment {
 //                textView.setText(s);
 //            }
 //        });
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        final View view = inflater.inflate(R.layout.fragment_home, container, false);
         vf = view.findViewById(R.id.vf);
         Button b1 = view.findViewById(R.id.b1);
         Button b2 = view.findViewById(R.id.b2);
+
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +48,23 @@ public class HomeFragment extends Fragment {
                 vf.showNext();
             }
         });
+
+
+
+        Button qr_register = view.findViewById(R.id.qr_register);
+        qr_register.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                new IntentIntegrator(getActivity()).initiateScan();
+
+            }
+
+        });
+
+
         return view;
     }
+
+
 }
