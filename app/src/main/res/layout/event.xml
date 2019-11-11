@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@string/event_name"
+                android:text="@string/eventname"
                 android:textColor="#ffffff"
                 android:textSize="20sp" />
 
@@ -42,7 +42,7 @@
                 android:drawableLeft="@drawable/ic_event_black_24dp"
                 android:gravity="center"
                 android:padding="3dp"
-                android:text="@string/event_time"
+                android:text="@string/eventtime"
                 android:textColor="#ffffff"
                 android:textColorHint="#ffffff" />
 
@@ -51,7 +51,7 @@
                 android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:padding="3dp"
-                android:text="@string/event_location"
+                android:text="@string/eventlocation"
                 android:textColor="#ffffff" />
         </LinearLayout>
 
