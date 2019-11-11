@@ -93,13 +93,14 @@
 
 
             <Button
+                android:id="@+id/qr_register"
                 android:layout_width="250dp"
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
                 android:background="@color/purple_2"
                 android:text="QR코드 등록"
-                android:textStyle="bold"
-                android:textColor="@android:color/background_light" />
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold" />
 
             <Button
                 android:layout_width="250dp"
