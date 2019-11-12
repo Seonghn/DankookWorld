@@ -38,11 +38,11 @@ public class MapFragment_information extends Fragment implements OnMapReadyCallb
     public void onMapReady(GoogleMap googleMap) {
 
         mMap = googleMap;
-        LatLng DW = new LatLng(37.322140, 127.126639);
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(DW);
-        markerOptions.title("단국대학교");
-        markerOptions.snippet("범정관");
+        LatLng DW = new LatLng(37.321496, 127.126718);
+//        MarkerOptions markerOptions = new MarkerOptions();
+//        markerOptions.position(DW);
+//        markerOptions.title("단국대학교");
+//        markerOptions.snippet("범정관");
 
         LatLng l1 = new LatLng(37.322655, 127.126027);
         MarkerOptions m1 = new MarkerOptions();
@@ -122,7 +122,7 @@ public class MapFragment_information extends Fragment implements OnMapReadyCallb
         m13.title("동매표소");
         mMap.addMarker(m13);
 
-        mMap.addMarker(markerOptions);
+//        mMap.addMarker(markerOptions);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(DW,17));
         mMap.setMyLocationEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(true);

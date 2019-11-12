@@ -51,12 +51,12 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
 
         mMap = googleMap;
-        LatLng DW = new LatLng(37.322140, 127.126639);
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(DW);
-        markerOptions.title("단국대학교");
-        markerOptions.snippet("범정관");
-        mMap.addMarker(markerOptions);
+        LatLng DW = new LatLng(37.321256, 127.127451);
+//        MarkerOptions markerOptions = new MarkerOptions();
+//        markerOptions.position(DW);
+//        markerOptions.title("단국대학교");
+//        markerOptions.snippet("범정관");
+//        mMap.addMarker(markerOptions);
 
         LatLng l1 = new LatLng(37.322861, 127.129152);
         MarkerOptions m1 = new MarkerOptions();
