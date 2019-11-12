@@ -40,18 +40,19 @@ public class MapFragment_food extends Fragment implements OnMapReadyCallback {
         mMap = googleMap;
         LatLng DW = new LatLng(37.322643, 127.125072);
 
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(DW);
-        markerOptions.title("단국대학교");
-        markerOptions.snippet("범정관");
-
         LatLng l1 = new LatLng(37.323523, 127.124110);
         MarkerOptions m1 = new MarkerOptions();
         m1.position(l1);
         m1.title("함지박");
         mMap.addMarker(m1);
 
-        mMap.addMarker(markerOptions);
+        LatLng l2 = new LatLng(37.323523, 127.124110);
+        MarkerOptions m2 = new MarkerOptions();
+        m2.position(l2);
+        m2.title("단국대학교");
+        m2.snippet("범정관");
+        mMap.addMarker(m2);
+
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(DW,17));
         mMap.setMyLocationEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(true);
