@@ -19,7 +19,7 @@ public class MapFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_map, container, false);
+        final View view = inflater.inflate(R.layout.fragment_map, container, false);
         getFragmentManager().beginTransaction().add(R.id.mapFrame, new MapFragment_wait()).commit();
         ImageButton wtB = view.findViewById(R.id.wtB);
         ImageButton atB = view.findViewById(R.id.atB);
@@ -29,24 +29,40 @@ public class MapFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 getFragmentManager().beginTransaction().add(R.id.mapFrame, new MapFragment_wait()).commit();
+                view.findViewById(R.id.wtB).setBackgroundResource(R.drawable.cir_border2);
+                view.findViewById(R.id.atB).setBackgroundResource(R.drawable.cir_border);
+                view.findViewById(R.id.foB).setBackgroundResource(R.drawable.cir_border);
+                view.findViewById(R.id.stB).setBackgroundResource(R.drawable.cir_border);
             }
         });
         atB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getFragmentManager().beginTransaction().add(R.id.mapFrame, new MapFragment_information()).commit();
+                view.findViewById(R.id.atB).setBackgroundResource(R.drawable.cir_border2);
+                view.findViewById(R.id.wtB).setBackgroundResource(R.drawable.cir_border);
+                view.findViewById(R.id.foB).setBackgroundResource(R.drawable.cir_border);
+                view.findViewById(R.id.stB).setBackgroundResource(R.drawable.cir_border);
             }
         });
         foB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getFragmentManager().beginTransaction().add(R.id.mapFrame, new MapFragment_food()).commit();
+                view.findViewById(R.id.foB).setBackgroundResource(R.drawable.cir_border2);
+                view.findViewById(R.id.atB).setBackgroundResource(R.drawable.cir_border);
+                view.findViewById(R.id.wtB).setBackgroundResource(R.drawable.cir_border);
+                view.findViewById(R.id.stB).setBackgroundResource(R.drawable.cir_border);
             }
         });
         stB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getFragmentManager().beginTransaction().add(R.id.mapFrame, new MapFragment_store()).commit();
+                view.findViewById(R.id.stB).setBackgroundResource(R.drawable.cir_border2);
+                view.findViewById(R.id.atB).setBackgroundResource(R.drawable.cir_border);
+                view.findViewById(R.id.foB).setBackgroundResource(R.drawable.cir_border);
+                view.findViewById(R.id.wtB).setBackgroundResource(R.drawable.cir_border);
             }
         });
 
