@@ -29,7 +29,7 @@
     <string name="coupon">쿠폰함</string>
     <string name="setting">설정</string>
 
-//food1
+    //food1
     <string name="restaurant1">니뽕내뽕</string>
     <string name="explainres1">다양한 퓨전 짬뽕 및 피자가 준비되어있습니다.</string>
     <string name="popmenu">대표메뉴</string>
@@ -77,6 +77,9 @@
     <string name="navheadersubtitle">android.studio@android.com</string>
     <string name="navheaderdesc">Navigation header</string>
     <string name="actionsettings">Settings</string>
+    <string name="cregcen">아이 정보 초기화</string>
+    <string name="cregad">아이 정보 수정</string>
+    <string name="cscan">보호자 정보 확인</string>
 
     <string name="menuhome">Home</string>
     <string name="menugallery">Gallery</string>
@@ -100,4 +103,5 @@
     <string name="eventname">유령들의 댄스배틀</string>
 
     <string name="explore">탐험하기</string>
+
 </resources>
