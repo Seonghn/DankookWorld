@@ -16,14 +16,14 @@ public class QRActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr);
-
-        findViewById(R.id.qr_scan).setOnClickListener(new View.OnClickListener() {
+        startQRCode();
+        /*findViewById(R.id.qr_scan).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startQRCode();
             }
         });
-
+    */
     }
 
     public void startQRCode() {
