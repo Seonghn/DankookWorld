@@ -53,6 +53,13 @@ public class QRActivity extends AppCompatActivity {
                 startQRCode();
             }
         });
+        findViewById(R.id.qr_null).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =  new Intent(getApplicationContext(), InitialActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void startQRCode() {
