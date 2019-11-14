@@ -23,11 +23,11 @@
         android:label="@string/menuslideshow"
         tools:layout="@layout/fragment_event" />
 
-    <fragment
+    <activity
         android:id="@+id/nav_find"
-        android:name="com.example.dankookworld.ui.fragment.QRFragment"
+        android:name="com.example.dankookworld.QRActivity"
         android:label="@string/menutools"
-        tools:layout="@layout/fragment_find" />
+        tools:layout="@layout/activity_qr" />
 
     <fragment
         android:id="@+id/nav_map"

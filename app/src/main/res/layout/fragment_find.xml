@@ -38,10 +38,10 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/sdfdsfdsfdsfdsf"
+                    android:id="@+id/cname1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="coding"
+                    android:text="@string/name"
                     android:textColor="@color/cardview_light_background" />
             </LinearLayout>
         </LinearLayout>
@@ -67,7 +67,7 @@
                 app:srcCompat="@android:drawable/stat_sys_phone_call" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="220dp"
                 android:layout_height="match_parent"
                 android:gravity="right|center_vertical"
                 android:orientation="vertical">
@@ -78,14 +78,15 @@
                     android:layout_height="38dp"
                     android:gravity="right"
                     android:paddingTop="@dimen/nav_header_vertical_spacing"
-                    android:text="전화번호"
+                    android:text="보호자 이름"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textColor="@android:color/black" />
 
                 <TextView
+                    android:id="@+id/nametext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/mobile"
+                    android:text="@string/noinfo"
                     android:textColor="@color/cardview_light_background" />
             </LinearLayout>
 
@@ -111,7 +112,7 @@
                 app:srcCompat="@android:drawable/ic_dialog_email" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="220dp"
                 android:layout_height="match_parent"
                 android:gravity="right|center_vertical"
                 android:orientation="vertical">
@@ -122,52 +123,16 @@
                     android:layout_height="38dp"
                     android:gravity="right"
                     android:paddingTop="@dimen/nav_header_vertical_spacing"
-                    android:text="전화번호"
+                    android:text="보호자 주소"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textColor="@android:color/black" />
 
                 <TextView
+                    android:id="@+id/addresstext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/message"
+                    android:text="@string/noinfo"
                     android:textColor="@color/cardview_light_background" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="300dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:background="@color/sky"
-            android:foregroundGravity="center">
-
-            <ImageView
-                android:id="@+id/info_f"
-                android:layout_width="40dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:contentDescription="@string/navheaderdesc"
-                android:paddingTop="@dimen/nav_header_vertical_spacing"
-                app:srcCompat="@android:drawable/ic_dialog_info" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="right|center_vertical"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/info_text"
-                    android:layout_width="94dp"
-                    android:layout_height="38dp"
-                    android:gravity="right"
-                    android:paddingTop="@dimen/nav_header_vertical_spacing"
-                    android:text="아이정보"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@android:color/black" />
-
             </LinearLayout>
 
         </LinearLayout>
@@ -191,7 +156,7 @@
                 app:srcCompat="@android:drawable/ic_dialog_dialer" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="220dp"
                 android:layout_height="match_parent"
                 android:gravity="right|center_vertical"
                 android:orientation="vertical">
@@ -202,14 +167,15 @@
                     android:layout_height="38dp"
                     android:gravity="right"
                     android:paddingTop="@dimen/nav_header_vertical_spacing"
-                    android:text="부모위치"
+                    android:text="보호자 전화번호"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textColor="@android:color/black" />
 
                 <TextView
+                    android:id="@+id/phonetext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/direction"
+                    android:text="@string/noinfo"
                     android:textColor="@color/cardview_light_background" />
             </LinearLayout>
 

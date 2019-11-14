@@ -80,6 +80,7 @@
     <string name="cregcen">아이 정보 초기화</string>
     <string name="cregad">아이 정보 수정</string>
     <string name="cscan">보호자 정보 확인</string>
+    <string name="noinfo">보호자 정보가 존재하지 않습니다.</string>
 
     <string name="menuhome">Home</string>
     <string name="menugallery">Gallery</string>
