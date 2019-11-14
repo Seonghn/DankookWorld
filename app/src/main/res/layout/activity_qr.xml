@@ -21,7 +21,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/back" />
+            android:background="@drawable/dancebattle" />
 
 
         <LinearLayout
@@ -38,35 +38,38 @@
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
                 android:background="@color/purple2"
-                android:text="QR코드 등록"
+                android:text="@string/cregister"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/qr_identify"
                 android:layout_width="250dp"
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
                 android:background="@color/purple"
-                android:text="아이등록"
-                android:textStyle="bold"
-                android:textColor="@android:color/background_light" />/>
+                android:text="@string/cscan"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold" />/>
 
             <Button
+                android:id="@+id/qr_adjust"
                 android:layout_width="250dp"
                 android:layout_height="100dp"
                 android:layout_marginBottom="10dp"
                 android:background="@color/purple2"
-                android:text="아이등록"
-                android:textStyle="bold"
-                android:textColor="@android:color/background_light" />/>
+                android:text="@string/cregad"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold" />/>
 
             <Button
+                android:id="@+id/qr_null"
                 android:layout_width="250dp"
                 android:layout_height="100dp"
                 android:background="@color/purple"
-                android:text="아이등록"
-                android:textStyle="bold"
-                android:textColor="@android:color/background_light" />/>
+                android:text="@string/cregcen"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold" />/>
 
         </LinearLayout>
     </FrameLayout>

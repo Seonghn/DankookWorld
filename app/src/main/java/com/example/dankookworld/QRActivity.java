@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -16,14 +18,14 @@ public class QRActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr);
-
-        findViewById(R.id.qr_scan).setOnClickListener(new View.OnClickListener() {
+        startQRCode();
+        /*findViewById(R.id.qr_scan).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startQRCode();
             }
         });
-
+    */
     }
 
     public void startQRCode() {
@@ -34,8 +36,34 @@ public class QRActivity extends AppCompatActivity {
     }
 
 
+    private FirebaseAuth firebaseAuth;
+    private FirebaseFirestore firebaseFirestore;
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        Intent intent = new Intent(this, C_finder.class);
+        startActivity(intent);
+
+        firebaseFirestore = FirebaseFirestore.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
+
+       /* if(firebaseAuth.getCurrentUser() != null){
+            String qr = firebaseAuth.getCurrentUser().getEmail();
+            DocumentReference docRef = firebaseFirestore.collection("qrcode").document(qr);
+            docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                    if (task.isSuccessful()) {
+                        DocumentSnapshot document = task.getResult();
+                        if (document != null) {
+                            userName.setText(document.getString("Name"));
+                        }
+                    }
+                }
+        });
+        userEmail.setText(userI);
+    }*/
 
         if (requestCode == IntentIntegrator.REQUEST_CODE) {
             IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
