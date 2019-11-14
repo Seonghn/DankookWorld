@@ -40,4 +40,6 @@
         android:name="com.example.dankookworld.ui.fragment.SettingFragment"
         android:label="@string/menusend"
         tools:layout="@layout/fragment_setting" />
+
+
 </navigation>

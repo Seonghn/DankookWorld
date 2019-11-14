@@ -1,36 +1,59 @@
 package com.example.dankookworld.ui.fragment;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.dankookworld.PageActivity;
 import com.example.dankookworld.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapFragment_food extends Fragment implements OnMapReadyCallback {
+public class MapFragment_food extends Fragment implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     GoogleMap mMap;
     private MapView mapView;
-
+    private Context context;
+    private ImageView atImage;
+    private TextView atText;
+    private String pid = "dd";
+    private View view;
+    private LinearLayout linearLayout;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.map_wait, container, false);
-        mapView = (MapView) view.findViewById(R.id.map);
+        view = inflater.inflate(R.layout.map_food, container, false);
+        mapView = (MapView) view.findViewById(R.id.map3);
         mapView.onCreate(savedInstanceState);
 
         mapView.getMapAsync(this);
-
+        context = container.getContext();
+        Button pageButton = view.findViewById(R.id.pageButton3);
+        pageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), PageActivity.class);
+                intent.putExtra("mfN","food");
+                intent.putExtra("id", pid);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 
@@ -39,6 +62,37 @@ public class MapFragment_food extends Fragment implements OnMapReadyCallback {
 
         mMap = googleMap;
         LatLng DW = new LatLng(37.322643, 127.125072);
+
+
+        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+            @Override
+            public void onMapClick(LatLng latLng) {
+//                atImage = view.findViewById(R.id.foodView);
+//                atText = view.findViewById(R.id.foodName);
+//                atText.setText(pid);
+//                atImage.setImageResource(R.drawable.bul);
+                linearLayout = view.findViewById(R.id.mapRelative3);
+                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT);
+                linearLayout.setLayoutParams(r_p);
+            }
+        });
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                pid = marker.getTitle();
+                atImage = view.findViewById(R.id.foodView);
+                atText = view.findViewById(R.id.foodName);
+
+                atText.setText(pid);
+                atImage.setImageResource(R.drawable.bul);
+
+                linearLayout = view.findViewById(R.id.mapRelative3);
+                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,480);
+                linearLayout.setLayoutParams(r_p);
+
+                return false;
+            }
+        });
 
         LatLng l1 = new LatLng(37.323523, 127.124110);
         MarkerOptions m1 = new MarkerOptions();
@@ -57,7 +111,15 @@ public class MapFragment_food extends Fragment implements OnMapReadyCallback {
         MarkerOptions m2 = new MarkerOptions();
         m2.position(l2);
         m2.title("니뽕내뽕");
-        mMap.addMarker(m2);
+//        mMap.addMarker(m2);
+        onMarkerClick(mMap.addMarker(m2));
+//        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+//            @Override
+//            public boolean onMarkerClick(Marker marker) {
+//                getFragmentManager().beginTransaction().add(R.id.markerFrame, new MarkerFragment()).commit();
+//                return false;
+//            }
+//        });
 
         LatLng l3 = new LatLng(37.322650, 127.124248);
         MarkerOptions m3 = new MarkerOptions();
@@ -134,6 +196,7 @@ public class MapFragment_food extends Fragment implements OnMapReadyCallback {
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(DW,17));
         mMap.setMyLocationEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(true);
+
     }
 
     @Override
@@ -171,6 +234,23 @@ public class MapFragment_food extends Fragment implements OnMapReadyCallback {
         super.onDestroy();
         mapView.onLowMemory();
     }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+//        getFragmentManager().beginTransaction().add(R.id.markerFrame, new MarkerFragment()).commit();
+        return false;
+    }
+
+
+//    GoogleMap.OnMarkerClickListener markerClickListener = new GoogleMap.OnMarkerClickListener() {
+//        @Override
+//        public boolean onMarkerClick(Marker marker) {
+//
+//            getFragmentManager().beginTransaction().add(R.id.mapFrame, new MarkerFragment()).commit();
+//
+//            return false;
+//        }
+//    };
 
 //    @Override
 //    public void onSaveInstanceState(Bundle outState) {

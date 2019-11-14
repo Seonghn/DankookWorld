@@ -1,36 +1,57 @@
 package com.example.dankookworld.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.dankookworld.PageActivity;
 import com.example.dankookworld.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapFragment_store extends Fragment implements OnMapReadyCallback {
 
     GoogleMap mMap;
     private MapView mapView;
+    private ImageView atImage;
+    private TextView atText;
+    private String pid = "dd";
+    private View view;
+    private LinearLayout linearLayout;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.map_wait, container, false);
-        mapView = (MapView) view.findViewById(R.id.map);
+        view = inflater.inflate(R.layout.map_store, container, false);
+        mapView = (MapView) view.findViewById(R.id.map4);
         mapView.onCreate(savedInstanceState);
 
         mapView.getMapAsync(this);
-
+        Button pageButton = view.findViewById(R.id.pageButton4);
+        pageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), PageActivity.class);
+                intent.putExtra("mfN","store");
+                intent.putExtra("id", pid);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 
@@ -39,11 +60,39 @@ public class MapFragment_store extends Fragment implements OnMapReadyCallback {
 
         mMap = googleMap;
         LatLng DW = new LatLng(37.322643, 127.125072);
-        MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(DW);
-        markerOptions.title("단국대학교");
-        markerOptions.snippet("범정관");
+//        MarkerOptions markerOptions = new MarkerOptions();
+//        markerOptions.position(DW);
+//        markerOptions.title("단국대학교");
+//        markerOptions.snippet("범정관");
+        mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+            @Override
+            public void onMapClick(LatLng latLng) {
+//                atImage = view.findViewById(R.id.foodView);
+//                atText = view.findViewById(R.id.foodName);
+//                atText.setText(pid);
+//                atImage.setImageResource(R.drawable.bul);
+                linearLayout = view.findViewById(R.id.mapRelative4);
+                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT);
+                linearLayout.setLayoutParams(r_p);
+            }
+        });
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                pid = marker.getTitle();
+                atImage = view.findViewById(R.id.storeView);
+                atText = view.findViewById(R.id.storeName);
 
+                atText.setText(pid);
+                atImage.setImageResource(R.drawable.bul);
+
+                linearLayout = view.findViewById(R.id.mapRelative4);
+                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,480);
+                linearLayout.setLayoutParams(r_p);
+
+                return false;
+            }
+        });
         LatLng l1 = new LatLng(37.323047, 127.126698);
         MarkerOptions m1 = new MarkerOptions();
         m1.position(l1);
@@ -105,7 +154,7 @@ public class MapFragment_store extends Fragment implements OnMapReadyCallback {
         mMap.addMarker(m10);
 
 
-        mMap.addMarker(markerOptions);
+//        mMap.addMarker(markerOptions);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(DW,17));
         mMap.setMyLocationEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(true);

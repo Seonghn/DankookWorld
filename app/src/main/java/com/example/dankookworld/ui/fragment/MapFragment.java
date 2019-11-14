@@ -1,14 +1,13 @@
 package com.example.dankookworld.ui.fragment;
 
 import android.os.Bundle;
-
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import com.example.dankookworld.R;
 
@@ -28,7 +27,7 @@ public class MapFragment extends Fragment {
         wtB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager().beginTransaction().add(R.id.mapFrame, new MapFragment_wait()).commit();
+                getFragmentManager().beginTransaction().replace(R.id.mapFrame, new MapFragment_wait()).commit();
                 view.findViewById(R.id.wtB).setBackgroundResource(R.drawable.cir_border2);
                 view.findViewById(R.id.atB).setBackgroundResource(R.drawable.cir_border);
                 view.findViewById(R.id.foB).setBackgroundResource(R.drawable.cir_border);
@@ -38,7 +37,7 @@ public class MapFragment extends Fragment {
         atB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager().beginTransaction().add(R.id.mapFrame, new MapFragment_information()).commit();
+                getFragmentManager().beginTransaction().replace(R.id.mapFrame, new MapFragment_information()).commit();
                 view.findViewById(R.id.atB).setBackgroundResource(R.drawable.cir_border2);
                 view.findViewById(R.id.wtB).setBackgroundResource(R.drawable.cir_border);
                 view.findViewById(R.id.foB).setBackgroundResource(R.drawable.cir_border);
@@ -48,7 +47,7 @@ public class MapFragment extends Fragment {
         foB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager().beginTransaction().add(R.id.mapFrame, new MapFragment_food()).commit();
+                getFragmentManager().beginTransaction().replace(R.id.mapFrame, new MapFragment_food()).commit();
                 view.findViewById(R.id.foB).setBackgroundResource(R.drawable.cir_border2);
                 view.findViewById(R.id.atB).setBackgroundResource(R.drawable.cir_border);
                 view.findViewById(R.id.wtB).setBackgroundResource(R.drawable.cir_border);
@@ -58,7 +57,7 @@ public class MapFragment extends Fragment {
         stB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getFragmentManager().beginTransaction().add(R.id.mapFrame, new MapFragment_store()).commit();
+                getFragmentManager().beginTransaction().replace(R.id.mapFrame, new MapFragment_store()).commit();
                 view.findViewById(R.id.stB).setBackgroundResource(R.drawable.cir_border2);
                 view.findViewById(R.id.atB).setBackgroundResource(R.drawable.cir_border);
                 view.findViewById(R.id.foB).setBackgroundResource(R.drawable.cir_border);
