@@ -18,14 +18,14 @@ public class QRActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qr);
-        startQRCode();
-        /*findViewById(R.id.qr_scan).setOnClickListener(new View.OnClickListener() {
+        //startQRCode();
+        findViewById(R.id.qr_scan).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startQRCode();
             }
         });
-    */
+
     }
 
     public void startQRCode() {
@@ -36,17 +36,14 @@ public class QRActivity extends AppCompatActivity {
     }
 
 
-    private FirebaseAuth firebaseAuth;
-    private FirebaseFirestore firebaseFirestore;
+    // private FirebaseAuth firebaseAuth;
+    // private FirebaseFirestore firebaseFirestore;
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        Intent intent = new Intent(this, C_finder.class);
-        startActivity(intent);
 
-        firebaseFirestore = FirebaseFirestore.getInstance();
-        firebaseAuth = FirebaseAuth.getInstance();
+
 
        /* if(firebaseAuth.getCurrentUser() != null){
             String qr = firebaseAuth.getCurrentUser().getEmail();
@@ -64,17 +61,24 @@ public class QRActivity extends AppCompatActivity {
         });
         userEmail.setText(userI);
     }*/
+        Intent intent = new Intent(this, c_register.class);
 
         if (requestCode == IntentIntegrator.REQUEST_CODE) {
             IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+            String qrresult = result.getContents();
             if (result == null) {
                 Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
+
+
             } else {
-                String qrresult = result.getContents();
+
                 Toast.makeText(this, "Scanned: " + qrresult, Toast.LENGTH_LONG).show();
+                intent.putExtra("qrresult",qrresult);
+                startActivity(intent);
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);
         }
+
     }
 }

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".c_register"
-        android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".c_register"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
             tools:layout_editor_absoluteY="376dp" />
 
         <EditText
-            android:id="@+id/editText9"
+            android:id="@+id/name1"
             android:layout_width="260dp"
             android:layout_height="40dp"
             android:layout_marginBottom="10dp"
@@ -40,7 +40,7 @@
             tools:layout_editor_absoluteY="435dp" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/phone1"
             android:layout_width="260dp"
             android:layout_height="40dp"
             android:layout_marginBottom="10dp"
@@ -50,7 +50,7 @@
             tools:layout_editor_absoluteY="496dp" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/address1"
             android:layout_width="260dp"
             android:layout_height="40dp"
             android:ems="10"
@@ -80,7 +80,7 @@
             android:text="@string/cinform" />
 
         <EditText
-            android:id="@+id/editText6"
+            android:id="@+id/cname"
             android:layout_width="260dp"
             android:layout_height="40dp"
             android:ems="10"
@@ -90,7 +90,7 @@
             tools:layout_editor_absoluteY="227dp" />
 
         <EditText
-            android:id="@+id/editText8"
+            android:id="@+id/cbirth"
             android:layout_width="260dp"
             android:layout_height="40dp"
             android:ems="10"
