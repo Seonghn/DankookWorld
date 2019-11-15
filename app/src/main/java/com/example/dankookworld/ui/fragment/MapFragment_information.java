@@ -31,6 +31,7 @@ public class MapFragment_information extends Fragment implements OnMapReadyCallb
     private TextView inText;
     private String pid = "dd";
     private View view;
+    private Integer height = 480;
     private LinearLayout linearLayout;
     @Nullable
     @Override
@@ -86,7 +87,7 @@ public class MapFragment_information extends Fragment implements OnMapReadyCallb
                 inImage.setImageResource(R.drawable.bul);
 
                 linearLayout = view.findViewById(R.id.mapRelative2);
-                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,1500);
+                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,height);
                 linearLayout.setLayoutParams(r_p);
                 return false;
             }

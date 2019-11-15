@@ -32,6 +32,7 @@ public class MapFragment_store extends Fragment implements OnMapReadyCallback {
     private String pid = "dd";
     private View view;
     private LinearLayout linearLayout;
+    private Integer height = 480;
 
     @Nullable
     @Override
@@ -87,7 +88,7 @@ public class MapFragment_store extends Fragment implements OnMapReadyCallback {
                 atImage.setImageResource(R.drawable.bul);
 
                 linearLayout = view.findViewById(R.id.mapRelative4);
-                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,1500);
+                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,height);
                 linearLayout.setLayoutParams(r_p);
 
                 return false;

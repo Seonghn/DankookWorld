@@ -10,6 +10,8 @@ import android.widget.ViewFlipper;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.dankookworld.QRActivity;
 import com.example.dankookworld.R;
@@ -36,7 +38,7 @@ public class HomeFragment extends Fragment {
         vf = view.findViewById(R.id.vf);
         Button b1 = view.findViewById(R.id.b1);
         Button b2 = view.findViewById(R.id.b2);
-        Button explore = view.findViewById(R.id.explore);
+
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,13 +73,18 @@ public class HomeFragment extends Fragment {
 
         });
 
-//        Button explore = view.findViewById(R.id.explore);
-//        explore.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                view = inflater.inflate(R.layout.fragment_map, container, false);
-//            }
-//        });
+
+        FragmentManager fm = getFragmentManager();
+        final FragmentTransaction fragmentTransaction = fm.beginTransaction();
+        Button explore = view.findViewById(R.id.explore);
+        explore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragmentTransaction.replace(R.id.nav_host_fragment, new MapFragment());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
 
 
         return view;

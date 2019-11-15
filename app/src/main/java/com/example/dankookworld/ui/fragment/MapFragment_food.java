@@ -33,6 +33,7 @@ public class MapFragment_food extends Fragment implements OnMapReadyCallback, Go
     private TextView atText;
     private String pid = "dd";
     private View view;
+    private Integer height = 480;
     private LinearLayout linearLayout;
     @Nullable
     @Override
@@ -87,7 +88,7 @@ public class MapFragment_food extends Fragment implements OnMapReadyCallback, Go
                 atImage.setImageResource(R.drawable.bul);
 
                 linearLayout = view.findViewById(R.id.mapRelative3);
-                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,1500);
+                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,height);
                 linearLayout.setLayoutParams(r_p);
 
                 return false;

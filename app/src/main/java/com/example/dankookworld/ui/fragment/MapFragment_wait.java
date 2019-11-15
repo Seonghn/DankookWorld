@@ -35,6 +35,7 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
     private View view;
     private LinearLayout linearLayout;
     private Button pageButton;
+    private Integer height = 480;
 
     @Nullable
     @Override
@@ -100,7 +101,7 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
 
                 linearLayout = view.findViewById(R.id.mapRelative);
 
-                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,1500);
+                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,height);
                 linearLayout.setLayoutParams(r_p);
                 
                 return false;
