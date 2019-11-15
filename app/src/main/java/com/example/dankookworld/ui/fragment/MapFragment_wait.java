@@ -99,7 +99,7 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
                 atImage.setImageResource(R.drawable.bul);
 
                 linearLayout = view.findViewById(R.id.mapRelative);
-                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,530);
+                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,1500);
                 linearLayout.setLayoutParams(r_p);
                 
                 return false;

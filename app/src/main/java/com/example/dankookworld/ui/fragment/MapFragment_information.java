@@ -86,7 +86,7 @@ public class MapFragment_information extends Fragment implements OnMapReadyCallb
                 inImage.setImageResource(R.drawable.bul);
 
                 linearLayout = view.findViewById(R.id.mapRelative2);
-                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,480);
+                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,1500);
                 linearLayout.setLayoutParams(r_p);
                 return false;
             }
