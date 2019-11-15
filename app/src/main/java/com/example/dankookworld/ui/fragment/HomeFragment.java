@@ -36,7 +36,7 @@ public class HomeFragment extends Fragment {
         vf = view.findViewById(R.id.vf);
         Button b1 = view.findViewById(R.id.b1);
         Button b2 = view.findViewById(R.id.b2);
-
+        Button explore = view.findViewById(R.id.explore);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +50,13 @@ public class HomeFragment extends Fragment {
                 vf.showNext();
             }
         });
-
+        /*explore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), MapFragment.class);
+                startActivity(intent);
+            }
+        });*/
 
 
         Button qr_register = view.findViewById(R.id.qr_scan);

@@ -103,6 +103,13 @@
     <string name="eventlocation">자이로스윙 앞</string>
     <string name="eventname">유령들의 댄스배틀</string>
 
-    <string name="explore">탐험하기</string>
+    <string name="infoexplainres1">안내데스크에서는 아래와 같은 서비스를 제공하고 있습니다.</string>
+    <string name="popservice">제공 서비스</string>
+    <string name="info1">정문 인포메이션</string>
 
+    <string name="explore">탑승인원</string>
+    <string name="person">탑승인원</string>
+    <string name="attrationinfo">이용정보</string>
+    <string name="person2">6명</string>
+    <string name="attractioninfo2">110cm 이상 탑승 가능/\n 65세 이하 탑승 가능</string>
 </resources>
