@@ -85,8 +85,15 @@ public class HomeActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
 
-        View view = navigationView.getHeaderView(0);
 
+        View view = navigationView.getHeaderView(0);
+//        Button explore = view.findViewById(R.id.explore);
+//        explore.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                view.
+//            }
+//        });
         userName = view.findViewById(R.id.userName);
         userEmail = view.findViewById(R.id.userEmail);
         userName.setText("비회원 입니다.");
