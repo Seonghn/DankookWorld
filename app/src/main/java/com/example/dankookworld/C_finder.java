@@ -77,9 +77,9 @@ public class C_finder extends AppCompatActivity {
                     Toast.makeText(this, "스캔되었습니다.", Toast.LENGTH_LONG).show();
 
                 }
-            }
-                else {
+            }else {
                     Toast.makeText(this, "스캔에 실패하였습니다.", Toast.LENGTH_LONG).show();
+                    finish();
                 }
             } else {
                 super.onActivityResult(requestCode, resultCode, data);

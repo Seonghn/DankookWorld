@@ -87,7 +87,7 @@ public class MapFragment_food extends Fragment implements OnMapReadyCallback, Go
                 atImage.setImageResource(R.drawable.bul);
 
                 linearLayout = view.findViewById(R.id.mapRelative3);
-                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,480);
+                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,1500);
                 linearLayout.setLayoutParams(r_p);
 
                 return false;
