@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyA2NqqLqWrMrojTnyoFbwERkyhJ5jvXVrc"/>
+            android:value="AIzaSyC8pjCSw_P1wJIW2R38-H-tnzxd3sc6UBs"/>
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
@@ -34,10 +34,13 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".QRActivity" />
+        <activity android:name=".c_register" />
+        <activity android:name=".C_finder" />
         <activity android:name="com.journeyapps.barcodescanner.CaptureActivity"
                   android:screenOrientation="fullSensor"
                   tools:replace="screenOrientation"/>
         <activity android:name=".PageActivity" />
+        <activity android:name=".InitialActivity" />
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>

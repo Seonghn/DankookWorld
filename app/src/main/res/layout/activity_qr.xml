@@ -21,13 +21,14 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/dancebattle" />
+            android:background="@drawable/background_splash"
+            android:scaleType="centerCrop" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#70F7F7F7"
+            android:background="@drawable/border"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -40,6 +41,7 @@
                 android:background="@color/purple2"
                 android:text="@string/cregister"
                 android:textColor="@android:color/background_light"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <Button
@@ -50,6 +52,7 @@
                 android:background="@color/purple"
                 android:text="@string/cscan"
                 android:textColor="@android:color/background_light"
+                android:textSize="18sp"
                 android:textStyle="bold" />/>
 
             <Button
@@ -60,6 +63,7 @@
                 android:background="@color/purple2"
                 android:text="@string/cregad"
                 android:textColor="@android:color/background_light"
+                android:textSize="18sp"
                 android:textStyle="bold" />/>
 
             <Button
@@ -69,6 +73,7 @@
                 android:background="@color/purple"
                 android:text="@string/cregcen"
                 android:textColor="@android:color/background_light"
+                android:textSize="18sp"
                 android:textStyle="bold" />/>
 
         </LinearLayout>
