@@ -18,9 +18,10 @@ public class HomeFragment extends Fragment {
 
     //    private HomeViewModel homeViewModel;
     private ViewFlipper vf;
+    private View view;
 
     public View onCreateView(@NonNull final LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+                             final ViewGroup container, Bundle savedInstanceState) {
 //        homeViewModel =
 //                ViewModelProviders.of(this).get(HomeViewModel.class);
 //        View root = inflater.inflate(R.layout.fragment_home, container, false);
@@ -31,7 +32,7 @@ public class HomeFragment extends Fragment {
 //                textView.setText(s);
 //            }
 //        });
-        final View view = inflater.inflate(R.layout.fragment_home, container, false);
+        view = inflater.inflate(R.layout.fragment_home, container, false);
         vf = view.findViewById(R.id.vf);
         Button b1 = view.findViewById(R.id.b1);
         Button b2 = view.findViewById(R.id.b2);
@@ -64,7 +65,13 @@ public class HomeFragment extends Fragment {
 
         });
 
-
+//        Button explore = view.findViewById(R.id.explore);
+//        explore.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                view = inflater.inflate(R.layout.fragment_map, container, false);
+//            }
+//        });
 
 
         return view;
