@@ -25,7 +25,7 @@
             android:background="@drawable/food2" />
 
         <TextView
-            android:id="@+id/res1_name"
+            android:id="@+id/res4_name"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:gravity="center"
@@ -37,7 +37,7 @@
             />
 
         <TextView
-            android:id="@+id/res1_ex"
+            android:id="@+id/res4_ex"
             android:layout_width="415dp"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
@@ -56,7 +56,7 @@
         android:layout_marginTop="17dp">
 
         <TextView
-            android:id="@+id/res1_menu"
+            android:id="@+id/res4_menu"
             android:layout_width="100dp"
             android:layout_height="55dp"
             android:gravity="left"
@@ -68,7 +68,7 @@
             />
 
         <TextView
-            android:id="@+id/res1_pop_menu"
+            android:id="@+id/res4_pop_menu"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:gravity="center"
@@ -87,7 +87,7 @@
         android:layout_marginTop="10dp">
 
         <TextView
-            android:id="@+id/res1_time"
+            android:id="@+id/res4_time"
             android:layout_width="100dp"
             android:layout_height="55dp"
             android:gravity="left"
@@ -99,7 +99,7 @@
             />
 
         <TextView
-            android:id="@+id/res1_in_time"
+            android:id="@+id/res4_in_time"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:gravity="center"
@@ -118,7 +118,7 @@
         android:layout_marginTop="10dp">
 
         <TextView
-            android:id="@+id/res1_phone"
+            android:id="@+id/res4_phone"
             android:layout_width="100dp"
             android:layout_height="55dp"
             android:gravity="left"
@@ -130,7 +130,7 @@
             />
 
         <TextView
-            android:id="@+id/res1_in_phone"
+            android:id="@+id/res4_in_phone"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:gravity="center"
