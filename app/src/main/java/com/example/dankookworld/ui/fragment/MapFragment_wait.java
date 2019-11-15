@@ -99,7 +99,7 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
                 atImage.setImageResource(R.drawable.bul);
 
                 linearLayout = view.findViewById(R.id.mapRelative);
-                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,530);
+                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,470);
                 linearLayout.setLayoutParams(r_p);
                 
                 return false;
@@ -122,7 +122,7 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
 
         LatLng l2 = new LatLng(37.322284, 127.129045);
         MarkerOptions m2 = new MarkerOptions();
-        m2.position(l1);
+        m2.position(l2);
         m2.title("VR스페이스");
         mMap.addMarker(m2);
 
