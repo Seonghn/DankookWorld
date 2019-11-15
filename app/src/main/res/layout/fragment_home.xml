@@ -13,7 +13,7 @@
         android:background="#0E0C0C">
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="400dp"
             android:layout_marginTop="90dp"
             android:background="@drawable/homeback"
@@ -33,6 +33,7 @@
                 android:id="@+id/explore"
                 android:layout_height="50dp"
                 android:layout_marginTop="450dp"
+                android:paddingLeft="7dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/border"
                 android:drawableLeft="@drawable/ic_add_location_black_24dp"

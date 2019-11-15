@@ -12,131 +12,135 @@
     tools:context="MainActivity"
     tools:layout_editor_absoluteY="-125dp">
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="370dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/food2" />
+
+        <TextView
+            android:id="@+id/res1_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="@string/restaurant1"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="370dp"
-                android:background="@drawable/food3"
-                />
-
-            <TextView
-                android:id="@+id/res3_name"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:text="@string/restaurant3"
-                android:textColor="@android:color/black"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
-                />
-
-            <TextView
-                android:id="@+id/res3_ex"
-                android:layout_width="415dp"
-                android:layout_height="40dp"
-                android:gravity="center"
-                android:text="@string/explainres3"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/res1_ex"
+            android:layout_width="415dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/explainres1"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_width="400dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/cir_border"
-            android:layout_marginTop="17dp">
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/cir_border"
+        android:layout_marginTop="17dp">
 
-            <TextView
-                android:id="@+id/res3_menu"
-                android:layout_width="100dp"
-                android:layout_height="55dp"
-                android:gravity="left"
-                android:text="@string/popmenu"
-                android:textColor="@color/purple"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                />
+        <TextView
+            android:id="@+id/res1_menu"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:gravity="left"
+            android:text="@string/popmenu"
+            android:textColor="@color/purple"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            />
 
-            <TextView
-                android:id="@+id/res3_pop_menu"
-                android:layout_width="250dp"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:text="@string/popmenures3"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="400dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/cir_border"
-            android:layout_marginTop="10dp">
-
-            <TextView
-                android:id="@+id/res3_time"
-                android:layout_width="100dp"
-                android:layout_height="55dp"
-                android:gravity="left"
-                android:text="@string/time"
-                android:textColor="@color/purple"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                />
-
-            <TextView
-                android:id="@+id/res3_in_time"
-                android:layout_width="250dp"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:text="@string/timeres3"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/res1_pop_menu"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:text="메뉴 종류"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_width="400dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/cir_border"
-            android:layout_marginTop="10dp">
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/cir_border"
+        android:layout_marginTop="10dp">
 
-            <TextView
-                android:id="@+id/res3_phone"
-                android:layout_width="100dp"
-                android:layout_height="55dp"
-                android:gravity="left"
-                android:text="@string/phone"
-                android:textColor="@color/purple"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                />
+        <TextView
+            android:id="@+id/res1_time"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:gravity="left"
+            android:text="@string/time"
+            android:textColor="@color/purple"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            />
 
-            <TextView
-                android:id="@+id/res3_in_phone"
-                android:layout_width="250dp"
-                android:layout_height="70dp"
-                android:gravity="center"
-                android:text="@string/phoneres3"
-                android:textColor="@android:color/black"
-                android:textSize="18sp"
-                />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/res1_in_time"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:text="@string/timeres1"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/cir_border"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/res1_phone"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:gravity="left"
+            android:text="@string/phone"
+            android:textColor="@color/purple"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:id="@+id/res1_in_phone"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:text="@string/phoneres1"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+
 
 </LinearLayout>
+
+
