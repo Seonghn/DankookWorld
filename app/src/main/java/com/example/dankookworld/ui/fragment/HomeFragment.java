@@ -8,18 +8,18 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ViewFlipper;
 
-import com.example.dankookworld.QRActivity;
-import com.example.dankookworld.R;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+
+import com.example.dankookworld.QRActivity;
+import com.example.dankookworld.R;
 
 public class HomeFragment extends Fragment {
 
     //    private HomeViewModel homeViewModel;
     private ViewFlipper vf;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
+    public View onCreateView(@NonNull final LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 //        homeViewModel =
 //                ViewModelProviders.of(this).get(HomeViewModel.class);
@@ -69,6 +69,8 @@ public class HomeFragment extends Fragment {
             }
 
         });
+
+
 
 
         return view;

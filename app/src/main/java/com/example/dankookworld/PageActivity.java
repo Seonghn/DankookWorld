@@ -21,28 +21,28 @@ public class PageActivity extends AppCompatActivity {
 
         switch (mfNum){
             case "wait":
-                setContentView(R.layout.food_1);
+                setContentView(R.layout.wait);
                 TextView textView = findViewById(R.id.res1_name);
                 textView.setText(name);
                 break;
 
 
             case "info":
-                setContentView(R.layout.food_2);
+                setContentView(R.layout.info);
                 TextView textView2 = findViewById(R.id.res2_name);
                 textView2.setText(name);
                 break;
 
 
             case "food":
-                setContentView(R.layout.food_3);
+                setContentView(R.layout.food);
                 TextView textView3 = findViewById(R.id.res3_name);
                 textView3.setText(name);
                 break;
 
 
             case "store":
-                setContentView(R.layout.food_4);
+                setContentView(R.layout.store);
                 TextView textView4 = findViewById(R.id.res4_name);
                 textView4.setText(name);
                 break;
