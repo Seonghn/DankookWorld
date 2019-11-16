@@ -56,9 +56,7 @@ public class C_finder extends AppCompatActivity {
             IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
             qrresult = result.getContents();
             if (qrresult != null) {
-
                 if (firebaseAuth != null) {
-
                     DocumentReference docRef = firebaseFirestore.collection("qrcode").document(qrresult);
                     docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                         @Override
@@ -76,7 +74,6 @@ public class C_finder extends AppCompatActivity {
                         }
                     });
                     Toast.makeText(this, "스캔되었습니다.", Toast.LENGTH_LONG).show();
-
                 }
             }else {
                     Toast.makeText(this, "스캔에 실패하였습니다.", Toast.LENGTH_LONG).show();
@@ -85,7 +82,6 @@ public class C_finder extends AppCompatActivity {
             } else {
                 super.onActivityResult(requestCode, resultCode, data);
             }
-
         }
 
     }
