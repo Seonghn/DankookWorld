@@ -56,9 +56,7 @@ public class C_finder extends AppCompatActivity {
             IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
             qrresult = result.getContents();
             if (qrresult != null) {
-
                 if (firebaseAuth != null) {
-
                     DocumentReference docRef = firebaseFirestore.collection("qrcode").document(qrresult);
                     docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                         @Override
@@ -70,12 +68,12 @@ public class C_finder extends AppCompatActivity {
                                     cname.setText(document.getString("아이이름"));
                                     addresstext.setText(document.getString("주소"));
                                     nametext.setText(document.getString("이름"));
+
                                 }
                             }
                         }
                     });
                     Toast.makeText(this, "스캔되었습니다.", Toast.LENGTH_LONG).show();
-
                 }
             }else {
                     Toast.makeText(this, "스캔에 실패하였습니다.", Toast.LENGTH_LONG).show();
@@ -84,7 +82,7 @@ public class C_finder extends AppCompatActivity {
             } else {
                 super.onActivityResult(requestCode, resultCode, data);
             }
-
         }
+
     }
 

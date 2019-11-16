@@ -48,6 +48,7 @@
             android:layout_height="48dp"
             android:ems="10"
             android:hint="@string/phone"
+            android:inputType="phone"
             tools:layout_editor_absoluteX="72dp"
             tools:layout_editor_absoluteY="496dp" />
 
@@ -57,7 +58,8 @@
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:ems="10"
-            android:inputType="textPostalAddress"
+            android:focusable="false"
+            android:inputType="number"
             android:hint="@string/birthday"
             tools:layout_editor_absoluteX="71dp"
             tools:layout_editor_absoluteY="559dp" />
