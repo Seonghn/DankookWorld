@@ -109,13 +109,13 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
                 return false;
             }
         });
-        mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
-            @Override
-            public void onInfoWindowClick(Marker marker) {
-                Intent intent = new Intent(getActivity(), PageActivity.class);
-                startActivity(intent);
-            }
-        });
+//        mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+//            @Override
+//            public void onInfoWindowClick(Marker marker) {
+//                Intent intent = new Intent(getActivity(), PageActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         mNumber = 1;
         LatLng l1 = new LatLng(37.322861, 127.129152);
