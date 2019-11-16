@@ -81,9 +81,11 @@
     <string name="cregad">아이 정보 수정</string>
     <string name="cscan">보호자 정보 확인</string>
     <string name="noinfo">보호자 정보가 존재하지 않습니다.</string>
+    <string name="noinfo2">아이 정보가 존재하지 않습니다.</string>
     <string name="childfind">아래의 정보를 통해 아이의 보호자를 찾아주세요!\n\n 아이에게 즐거운 놀이동산의 추억을 선사할 수 있습니다:) </string>
 
     <string name="childaname">아이 이름</string>
+    <string name="childage">아이 나이 </string>
     <string name="menuhome">Home</string>
     <string name="menugallery">Gallery</string>
     <string name="menuslideshow">Slideshow</string>

@@ -33,7 +33,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10sp"
-                    android:drawableRight="@drawable/ic_child_care_black_24dp"
                     android:text="@string/childaname"
                     android:textColor="@color/purple"
                     android:textSize="18sp"
@@ -63,6 +62,52 @@
             android:textColor="@color/colorPrimaryDark"
             android:textSize="16sp"
             android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50sp"
+            android:background="@color/sky"
+            android:foregroundGravity="center"
+            android:gravity="left">
+
+            <ImageView
+                android:id="@+id/child_age"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:contentDescription="@string/navheaderdesc"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:src="@drawable/ic_child_care_black_24dp" />
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/child_age1"
+                    android:layout_width="88dp"
+                    android:layout_height="38dp"
+                    android:gravity="right"
+                    android:paddingTop="@dimen/nav_header_vertical_spacing"
+                    android:text="@string/childage"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/nametext0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/noinfo2"
+                    android:textColor="#3F51B5" />
+            </LinearLayout>
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="300dp"
@@ -115,7 +160,7 @@
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:background="@color/sky"
             android:foregroundGravity="center">
 
@@ -160,7 +205,7 @@
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:background="@color/sky"
             android:foregroundGravity="center">
 
