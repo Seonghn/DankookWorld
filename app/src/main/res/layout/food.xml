@@ -22,7 +22,7 @@
             android:layout_height="370dp"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/food2" />
+            android:id="@+id/foodImage" />
 
         <TextView
             android:id="@+id/res3_name"

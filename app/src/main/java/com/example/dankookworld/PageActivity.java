@@ -2,6 +2,7 @@ package com.example.dankookworld;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -18,10 +19,15 @@ public class PageActivity extends AppCompatActivity {
 
         String mfNum = intent.getStringExtra("mfN");
         String name = intent.getStringExtra("id");
+        int num = intent.getIntExtra("mNumber",-1);
+        String viewID = ""+ mfNum + num;
+        int resID = getResources().getIdentifier(viewID,"id", getCallingActivity().getPackageName());
 
-        switch (mfNum){
+        switch (mfNum) {
             case "wait":
                 setContentView(R.layout.wait);
+                ImageView imageView = findViewById(R.id.waitImage);
+                imageView.setImageResource(resID);
                 TextView textView = findViewById(R.id.res1_name);
                 textView.setText(name);
                 break;
@@ -47,6 +53,23 @@ public class PageActivity extends AppCompatActivity {
                 textView4.setText(name);
                 break;
         }
+//        if (firebaseAuth.getCurrentUser() != null) {
+//            String userI = firebaseAuth.getCurrentUser().getEmail();
+//            DocumentReference docRef = firebaseFirestore.collection("user").document(userI);
+//            docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+//                @Override
+//                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+//                    if (task.isSuccessful()) {
+//                        DocumentSnapshot document = task.getResult();
+//                        if (document != null) {
+//                            userName.setText(document.getString("Name"));
+//                        }
+//                    }
+//                }
+//            });
+        }
 
     }
-}
+//
+//    public void fetchDB_map(String )
+
