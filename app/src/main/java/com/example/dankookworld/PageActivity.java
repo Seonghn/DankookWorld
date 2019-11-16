@@ -19,17 +19,18 @@ public class PageActivity extends AppCompatActivity {
 
         String mfNum = intent.getStringExtra("mfN");
         String name = intent.getStringExtra("id");
-        int num = intent.getIntExtra("mNumber",-1);
-        String viewID = ""+ mfNum + num;
-        int resID = getResources().getIdentifier(viewID,"id", getCallingActivity().getPackageName());
+        String mNumber = intent.getStringExtra("mNumber");
+        String[] d = mNumber.split("m");
+        String viewID = ""+ mfNum + d[1];
+//        int resID = getResources().getIdentifier(viewID,"drawable", getCallingActivity().getPackageName());
 
         switch (mfNum) {
             case "wait":
                 setContentView(R.layout.wait);
                 ImageView imageView = findViewById(R.id.waitImage);
-                imageView.setImageResource(resID);
+//                imageView.setImageResource(resID);
                 TextView textView = findViewById(R.id.res1_name);
-                textView.setText(name);
+                textView.setText(viewID);
                 break;
 
 
