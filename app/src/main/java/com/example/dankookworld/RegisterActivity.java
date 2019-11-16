@@ -1,13 +1,16 @@
 package com.example.dankookworld;
 
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.ClipData;
 import android.content.Intent;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telephony.PhoneNumberFormattingTextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -18,6 +21,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,12 +34,14 @@ public class RegisterActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseFirestore firebaseFirestore;
     ProgressDialog progressDialog;
-    String Name,Phone,Birth,Address;
+    int year, month, day;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        GregorianCalendar calendar = new GregorianCalendar();
+
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
@@ -45,12 +52,25 @@ public class RegisterActivity extends AppCompatActivity {
 
         name = findViewById(R.id.name);
         phone = findViewById(R.id.phone);
+        phone.addTextChangedListener(new PhoneNumberFormattingTextWatcher());
         birth = findViewById(R.id.birth);
         address = findViewById(R.id.address);
         insertId = findViewById(R.id.insertId);
         insertPwd = findViewById(R.id.insertPwd);
 
         Button register = findViewById(R.id.register);
+
+
+
+        // birth.setText(year+"."+month+"."+day);
+
+        birth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DateSet();
+
+            }
+        });
 
 
 
@@ -100,6 +120,22 @@ public class RegisterActivity extends AppCompatActivity {
 
 
 
+    }
+    private void DateSet(){
+        DatePickerDialog.OnDateSetListener callback = new DatePickerDialog.OnDateSetListener(){
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth){
+                String resultBirthday = year +"."+ String.format("%02d",monthOfYear+1) +"."+ String.format("%02d",dayOfMonth) ;
+                birth.setText(resultBirthday);
+
+            }
+        };
+        Calendar calendar1 = Calendar.getInstance();
+        year = calendar1.get(Calendar.YEAR);
+        month = calendar1.get(Calendar.MONTH);
+        day = calendar1.get(Calendar.DAY_OF_MONTH);
+        DatePickerDialog dateDialog = new DatePickerDialog(this, callback, year, month, day);
+        dateDialog.show();
     }
 
 }
