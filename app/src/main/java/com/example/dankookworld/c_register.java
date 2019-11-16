@@ -89,7 +89,7 @@ public class c_register extends AppCompatActivity {
                         DocumentSnapshot document = task.getResult();
                         if (document != null) {
                             cname.setText(document.getString("아이이름"));
-                            cbirth.setText(document.getString("아이생일"));
+                            cbirth.setText(document.getString("아이나이"));
                         }
 
                     }
@@ -101,13 +101,13 @@ public class c_register extends AppCompatActivity {
             Button submit = findViewById(R.id.submit);
 
 
-            cbirth.setOnClickListener(new View.OnClickListener() {
+            /*cbirth.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     DateSet();
 
                 }
-            });
+            });*/
 
             //  progressDialog = new ProgressDialog(this);
 
@@ -117,7 +117,7 @@ public class c_register extends AppCompatActivity {
                 public void onClick(View v) {
                     Map<String, Object> dataToSave = new HashMap<>();
                     dataToSave.put("주소", address1.getText().toString());
-                    dataToSave.put("아이생일", cbirth.getText().toString());
+                    dataToSave.put("아이나이", cbirth.getText().toString());
                     dataToSave.put("이름", name1.getText().toString());
                     dataToSave.put("전화번호", phone1.getText().toString());
                     dataToSave.put("아이이름", cname.getText().toString());

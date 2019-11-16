@@ -51,7 +51,7 @@ public class C_finder extends AppCompatActivity {
         final TextView addresstext = findViewById(R.id.addresstext);
         final TextView nametext = findViewById(R.id.nametext);
         final TextView cname = findViewById(R.id.cname1);
-
+        final TextView cage = findViewById(R.id.cage);
         if (requestCode == IntentIntegrator.REQUEST_CODE) {
             IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
             qrresult = result.getContents();
@@ -68,7 +68,7 @@ public class C_finder extends AppCompatActivity {
                                     cname.setText(document.getString("아이이름"));
                                     addresstext.setText(document.getString("주소"));
                                     nametext.setText(document.getString("이름"));
-
+                                    cage.setText(document.getString("아이나이"));
                                 }
                             }
                         }
