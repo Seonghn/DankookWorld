@@ -21,15 +21,6 @@
             android:background="@color/purple2"
             android:gravity="center">
 
-            <ImageView
-                android:id="@+id/profile"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:contentDescription="@string/navheaderdesc"
-                android:paddingTop="@dimen/nav_header_vertical_spacing"
-                app:srcCompat="@drawable/user" />
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -38,20 +29,91 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10sp"
+                    android:text="@string/childaname"
+                    android:textColor="@color/purple"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/cname1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/name"
-                    android:textColor="@color/cardview_light_background" />
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+
             </LinearLayout>
+
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50sp"
+            android:gravity="center"
+            android:text="@string/childfind"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50sp"
+            android:background="@color/sky"
+            android:foregroundGravity="center"
+            android:gravity="left">
+
+            <ImageView
+                android:id="@+id/child_age"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:contentDescription="@string/navheaderdesc"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:src="@drawable/ic_child_care_black_24dp" />
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:gravity="right|center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/child_age1"
+                    android:layout_width="88dp"
+                    android:layout_height="38dp"
+                    android:gravity="right"
+                    android:paddingTop="@dimen/nav_header_vertical_spacing"
+                    android:text="@string/childage"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/nametext0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/noinfo2"
+                    android:textColor="#3F51B5" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50sp"
             android:background="@color/sky"
             android:foregroundGravity="center"
             android:gravity="left">
@@ -64,7 +126,7 @@
                 android:layout_marginLeft="20dp"
                 android:contentDescription="@string/navheaderdesc"
                 android:paddingTop="@dimen/nav_header_vertical_spacing"
-                app:srcCompat="@android:drawable/stat_sys_phone_call" />
+                android:src="@drawable/ic_accessibility_black_24dp" />
 
             <LinearLayout
                 android:layout_width="220dp"
@@ -80,14 +142,15 @@
                     android:paddingTop="@dimen/nav_header_vertical_spacing"
                     android:text="보호자 이름"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/nametext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/noinfo"
-                    android:textColor="@color/cardview_light_background" />
+                    android:textColor="#3F51B5" />
             </LinearLayout>
 
         </LinearLayout>
@@ -109,7 +172,7 @@
                 android:layout_marginLeft="20dp"
                 android:contentDescription="@string/navheaderdesc"
                 android:paddingTop="@dimen/nav_header_vertical_spacing"
-                app:srcCompat="@android:drawable/ic_dialog_email" />
+                android:src="@drawable/ic_add_location_black_24dp" />
 
             <LinearLayout
                 android:layout_width="220dp"
@@ -125,14 +188,15 @@
                     android:paddingTop="@dimen/nav_header_vertical_spacing"
                     android:text="보호자 주소"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/addresstext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/noinfo"
-                    android:textColor="@color/cardview_light_background" />
+                    android:textColor="#3F51B5" />
             </LinearLayout>
 
         </LinearLayout>
@@ -153,7 +217,7 @@
                 android:layout_marginLeft="20dp"
                 android:contentDescription="@string/navheaderdesc"
                 android:paddingTop="@dimen/nav_header_vertical_spacing"
-                app:srcCompat="@android:drawable/ic_dialog_dialer" />
+                android:src="@drawable/ic_contact_phone_black_24dp" />
 
             <LinearLayout
                 android:layout_width="220dp"
@@ -163,25 +227,25 @@
 
                 <TextView
                     android:id="@+id/text1"
-                    android:layout_width="94dp"
+                    android:layout_width="147dp"
                     android:layout_height="38dp"
                     android:gravity="right"
                     android:paddingTop="@dimen/nav_header_vertical_spacing"
                     android:text="보호자 전화번호"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/phonetext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/noinfo"
                     android:autoLink="phone"
-                    android:textColor="@color/cardview_light_background" />
+                    android:text="@string/noinfo"
+                    android:textColor="#3F51B5" />
             </LinearLayout>
 
         </LinearLayout>
-
 
     </LinearLayout>
 
