@@ -70,6 +70,7 @@ public class C_finder extends AppCompatActivity {
                                     cname.setText(document.getString("아이이름"));
                                     addresstext.setText(document.getString("주소"));
                                     nametext.setText(document.getString("이름"));
+
                                 }
                             }
                         }
