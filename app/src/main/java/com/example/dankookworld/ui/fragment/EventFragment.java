@@ -9,11 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.AdapterView;
 
-import com.example.dankookworld.MyListAdapter;
+import com.example.dankookworld.MyListAdapter_event;
 import com.example.dankookworld.Notice_itemList;
 import com.example.dankookworld.R;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -32,19 +34,24 @@ public class EventFragment extends Fragment {
 
         ListView listView = (ListView) view.findViewById(R.id.eventList);
 
+        SimpleDateFormat format1 = new SimpleDateFormat ( "yyyy-MM-dd HH:mm");
+        Date time = new Date();
+        String time1 = format1.format(time);
+
         list_itemArrayList = new ArrayList<Notice_itemList>();
         list_itemArrayList.add(
-                new Notice_itemList(R.mipmap.ic_launcher," [이벤트1]"," 제목1",new Date(System.currentTimeMillis())," 내용1"));
+                new Notice_itemList(R.drawable.dancebattle," event1"," 유령들의 댄스배틀",time1," 자이로스윙 앞"));
         list_itemArrayList.add(
-                new Notice_itemList(R.mipmap.ic_launcher," [이벤트2]"," 제목2",new Date(System.currentTimeMillis())," 내용2"));
+                new Notice_itemList(R.drawable.store2," event2"," 제목2",time1," 내용2"));
         list_itemArrayList.add(
-                new Notice_itemList(R.mipmap.ic_launcher," [이벤트3]"," 제목3",new Date(System.currentTimeMillis())," 내용3"));
+                new Notice_itemList(R.drawable.store3," event3"," 제목3",time1," 내용3"));
         list_itemArrayList.add(
-                new Notice_itemList(R.mipmap.ic_launcher," [이벤트4]"," 제목4",new Date(System.currentTimeMillis())," 내용4"));
+                new Notice_itemList(R.drawable.store4," event4"," 제목4",time1," 내용4"));
         list_itemArrayList.add(
-                new Notice_itemList(R.mipmap.ic_launcher," [이벤트5]"," 제목5",new Date(System.currentTimeMillis())," 내용5"));
+                new Notice_itemList(R.drawable.store5," event5"," 제목5",time1," 내용5"));
 
-        listView.setAdapter(new MyListAdapter(getActivity(), list_itemArrayList));
+        listView.setAdapter(new MyListAdapter_event(getActivity(), list_itemArrayList));
+
 
         return  view;
 

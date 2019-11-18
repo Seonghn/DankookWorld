@@ -13,11 +13,10 @@
         android:background="@color/purple">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/profile_imageview_event"
             android:layout_width="177dp"
             android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/dancebattle" />
+            android:scaleType="fitXY"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,19 +25,28 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView19"
+                android:id="@+id/nickname_textview_event"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:text="event1"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/title_textview_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="@string/eventname"
                 android:textColor="#ffffff"
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/nameText"
+                android:id="@+id/date_textview_event"
                 android:layout_width="158dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="45dp"
+                android:layout_marginTop="23dp"
                 android:drawableLeft="@drawable/ic_event_black_24dp"
                 android:gravity="center"
                 android:padding="3dp"
@@ -47,7 +55,7 @@
                 android:textColorHint="#ffffff" />
 
             <TextView
-                android:id="@+id/dateText"
+                android:id="@+id/content_textview_event"
                 android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:padding="3dp"

@@ -7,10 +7,10 @@ public class Notice_itemList {
     private int profile_image;
     private String nickname;
     private String title;
-    private Date write_date;
+    private String write_date;
     private String content;
 
-    public Notice_itemList(int profile_image, String nickname, String title, Date write_date, String content) {
+    public Notice_itemList(int profile_image, String nickname, String title, String write_date, String content) {
         this.profile_image = profile_image;
         this.nickname = nickname;
         this.title = title;
@@ -42,11 +42,11 @@ public class Notice_itemList {
         this.title = title;
     }
 
-    public Date getWrite_date() {
+    public String getWrite_date() {
         return write_date;
     }
 
-    public void setWrite_date(Date write_date) {
+    public void setWrite_date(String write_date) {
         this.write_date = write_date;
     }
 
