@@ -100,7 +100,7 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/nametext0"
+                    android:id="@+id/cage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/noinfo2"
