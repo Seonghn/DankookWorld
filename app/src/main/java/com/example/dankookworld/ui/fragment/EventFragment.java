@@ -40,7 +40,7 @@ public class EventFragment extends Fragment {
 
         list_itemArrayList = new ArrayList<Notice_itemList>();
         list_itemArrayList.add(
-                new Notice_itemList(R.drawable.dancebattle," event1"," 유령들의 댄스배틀",time1," 자이로스윙 앞"));
+                new Notice_itemList(R.drawable.dancebattle," evnt1"," 유령들의 댄스배틀",time1," 자이로스윙 앞"));
         list_itemArrayList.add(
                 new Notice_itemList(R.drawable.store2," event2"," 제목2",time1," 내용2"));
         list_itemArrayList.add(
