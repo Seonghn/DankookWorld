@@ -33,6 +33,9 @@ public class MapFragment_information extends Fragment implements OnMapReadyCallb
     private View view;
     private Integer height = 480;
     private LinearLayout linearLayout;
+    private String mNumber;
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -49,6 +52,7 @@ public class MapFragment_information extends Fragment implements OnMapReadyCallb
                 Intent intent = new Intent(getActivity(), PageActivity.class);
                 intent.putExtra("mfN","info");
                 intent.putExtra("id", pid);
+                intent.putExtra("mNumber", mNumber);
                 startActivity(intent);
             }
         });
@@ -80,11 +84,15 @@ public class MapFragment_information extends Fragment implements OnMapReadyCallb
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
+                mNumber = marker.getId();
                 pid = marker.getTitle();
+                String[] d = mNumber.split("m");
+                String viewID = "info" + d[1];
+                int resID = getResources().getIdentifier(viewID,"drawable", getActivity().getPackageName());
                 inImage = view.findViewById(R.id.infoView);
                 inText = view.findViewById(R.id.infoName);
                 inText.setText(pid);
-                inImage.setImageResource(R.drawable.bul);
+                inImage.setImageResource(resID);
 
                 linearLayout = view.findViewById(R.id.mapRelative2);
                 LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,height);

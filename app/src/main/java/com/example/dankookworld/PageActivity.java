@@ -22,20 +22,22 @@ public class PageActivity extends AppCompatActivity {
         String mNumber = intent.getStringExtra("mNumber");
         String[] d = mNumber.split("m");
         String viewID = ""+ mfNum + d[1];
-//        int resID = getResources().getIdentifier(viewID,"drawable", getCallingActivity().getPackageName());
+        int resID = getResources().getIdentifier(viewID,"drawable", getPackageName());
 
         switch (mfNum) {
             case "wait":
                 setContentView(R.layout.wait);
                 ImageView imageView = findViewById(R.id.waitImage);
-//                imageView.setImageResource(resID);
+                imageView.setImageResource(resID);
                 TextView textView = findViewById(R.id.res1_name);
-                textView.setText(viewID);
+                textView.setText(name);
                 break;
 
 
             case "info":
                 setContentView(R.layout.info);
+                ImageView imageView2 = findViewById(R.id.infoImage);
+                imageView2.setImageResource(resID);
                 TextView textView2 = findViewById(R.id.res2_name);
                 textView2.setText(name);
                 break;
@@ -43,6 +45,8 @@ public class PageActivity extends AppCompatActivity {
 
             case "food":
                 setContentView(R.layout.food);
+                ImageView imageView3 = findViewById(R.id.foodImage);
+                imageView3.setImageResource(resID);
                 TextView textView3 = findViewById(R.id.res3_name);
                 textView3.setText(name);
                 break;
@@ -50,6 +54,8 @@ public class PageActivity extends AppCompatActivity {
 
             case "store":
                 setContentView(R.layout.store);
+                ImageView imageView4 = findViewById(R.id.storeImage);
+                imageView4.setImageResource(resID);
                 TextView textView4 = findViewById(R.id.res4_name);
                 textView4.setText(name);
                 break;
