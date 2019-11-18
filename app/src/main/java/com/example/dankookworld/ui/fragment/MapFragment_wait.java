@@ -102,7 +102,7 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
                 atImage = view.findViewById(R.id.waitView);
                 atText = view.findViewById(R.id.waitName);
 
-                atText.setText(pid);
+                atText.setText(resID);
                 atImage.setImageResource(resID);
 
                 linearLayout = view.findViewById(R.id.mapRelative);
