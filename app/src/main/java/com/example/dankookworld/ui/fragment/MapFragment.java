@@ -65,6 +65,12 @@ public class MapFragment extends Fragment {
             }
         });
 
+//        getFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
+//            @Override
+//            public void onBackStackChanged() {
+//
+//            }
+//        });
 
         return view;
     }

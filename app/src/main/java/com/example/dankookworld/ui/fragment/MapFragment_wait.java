@@ -35,6 +35,8 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
     private View view;
     private LinearLayout linearLayout;
     private Button pageButton;
+    private int height = 480;
+    private String mNumber;
 
     @Nullable
     @Override
@@ -54,6 +56,7 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
                 Intent intent = new Intent(getActivity(), PageActivity.class);
                 intent.putExtra("mfN","wait");
                 intent.putExtra("id", pid);
+                intent.putExtra("mNumber", mNumber);
                 startActivity(intent);
             }
         });
@@ -92,28 +95,31 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
             @Override
             public boolean onMarkerClick(Marker marker) {
                 pid = marker.getTitle();
+                mNumber = marker.getId();
+                String[] d = mNumber.split("m");
+                String viewID = "wait" + d[1];
+                int resID = getResources().getIdentifier(viewID,"drawable", getActivity().getPackageName());
                 atImage = view.findViewById(R.id.waitView);
                 atText = view.findViewById(R.id.waitName);
 
                 atText.setText(pid);
-                atImage.setImageResource(R.drawable.bul);
+                atImage.setImageResource(resID);
 
                 linearLayout = view.findViewById(R.id.mapRelative);
 
-                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,1500);
+                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,height);
                 linearLayout.setLayoutParams(r_p);
                 
                 return false;
             }
         });
-        mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
-            @Override
-            public void onInfoWindowClick(Marker marker) {
-                Intent intent = new Intent(getActivity(), PageActivity.class);
-                startActivity(intent);
-            }
-        });
-
+//        mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+//            @Override
+//            public void onInfoWindowClick(Marker marker) {
+//                Intent intent = new Intent(getActivity(), PageActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         LatLng l1 = new LatLng(37.322861, 127.129152);
         MarkerOptions m1 = new MarkerOptions();

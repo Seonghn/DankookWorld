@@ -36,6 +36,7 @@ public class InitialActivity extends Activity {
 
     public void startQRCode() {
         qrScan = new IntentIntegrator(this);
+        qrScan.setBeepEnabled(false);
         qrScan.setOrientationLocked(false); // default가 세로모드인데 휴대폰 방향에 따라 가로, 세로로 자동 변경됩니다.
         qrScan.setPrompt("QR 코드를 스캔해주세요 !");
         qrScan.initiateScan();

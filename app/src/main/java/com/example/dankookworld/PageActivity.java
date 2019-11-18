@@ -2,6 +2,7 @@ package com.example.dankookworld;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -18,10 +19,16 @@ public class PageActivity extends AppCompatActivity {
 
         String mfNum = intent.getStringExtra("mfN");
         String name = intent.getStringExtra("id");
+        String mNumber = intent.getStringExtra("mNumber");
+        String[] d = mNumber.split("m");
+        String viewID = ""+ mfNum + d[1];
+        int resID = getResources().getIdentifier(viewID,"drawable", getPackageName());
 
-        switch (mfNum){
+        switch (mfNum) {
             case "wait":
                 setContentView(R.layout.wait);
+                ImageView imageView = findViewById(R.id.waitImage);
+                imageView.setImageResource(resID);
                 TextView textView = findViewById(R.id.res1_name);
                 textView.setText(name);
                 break;
@@ -29,6 +36,8 @@ public class PageActivity extends AppCompatActivity {
 
             case "info":
                 setContentView(R.layout.info);
+                ImageView imageView2 = findViewById(R.id.infoImage);
+                imageView2.setImageResource(resID);
                 TextView textView2 = findViewById(R.id.res2_name);
                 textView2.setText(name);
                 break;
@@ -36,6 +45,8 @@ public class PageActivity extends AppCompatActivity {
 
             case "food":
                 setContentView(R.layout.food);
+                ImageView imageView3 = findViewById(R.id.foodImage);
+                imageView3.setImageResource(resID);
                 TextView textView3 = findViewById(R.id.res3_name);
                 textView3.setText(name);
                 break;
@@ -43,10 +54,29 @@ public class PageActivity extends AppCompatActivity {
 
             case "store":
                 setContentView(R.layout.store);
+                ImageView imageView4 = findViewById(R.id.storeImage);
+                imageView4.setImageResource(resID);
                 TextView textView4 = findViewById(R.id.res4_name);
                 textView4.setText(name);
                 break;
         }
+//        if (firebaseAuth.getCurrentUser() != null) {
+//            String userI = firebaseAuth.getCurrentUser().getEmail();
+//            DocumentReference docRef = firebaseFirestore.collection("user").document(userI);
+//            docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+//                @Override
+//                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+//                    if (task.isSuccessful()) {
+//                        DocumentSnapshot document = task.getResult();
+//                        if (document != null) {
+//                            userName.setText(document.getString("Name"));
+//                        }
+//                    }
+//                }
+//            });
+        }
 
     }
-}
+//
+//    public void fetchDB_map(String )
+

@@ -32,6 +32,8 @@ public class MapFragment_store extends Fragment implements OnMapReadyCallback {
     private String pid = "dd";
     private View view;
     private LinearLayout linearLayout;
+    private Integer height = 480;
+    private String mNumber;
 
     @Nullable
     @Override
@@ -49,6 +51,7 @@ public class MapFragment_store extends Fragment implements OnMapReadyCallback {
                 Intent intent = new Intent(getActivity(), PageActivity.class);
                 intent.putExtra("mfN","store");
                 intent.putExtra("id", pid);
+                intent.putExtra("mNumber", mNumber);
                 startActivity(intent);
             }
         });
@@ -79,15 +82,19 @@ public class MapFragment_store extends Fragment implements OnMapReadyCallback {
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
+                mNumber = marker.getId();
                 pid = marker.getTitle();
+                String[] d = mNumber.split("m");
+                String viewID = "store" + d[1];
+                int resID = getResources().getIdentifier(viewID,"drawable", getActivity().getPackageName());
                 atImage = view.findViewById(R.id.storeView);
                 atText = view.findViewById(R.id.storeName);
 
                 atText.setText(pid);
-                atImage.setImageResource(R.drawable.bul);
+                atImage.setImageResource(resID);
 
                 linearLayout = view.findViewById(R.id.mapRelative4);
-                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,1500);
+                LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,height);
                 linearLayout.setLayoutParams(r_p);
 
                 return false;
