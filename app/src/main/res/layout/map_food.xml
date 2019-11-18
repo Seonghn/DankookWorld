@@ -35,6 +35,7 @@
                 android:layout_height="match_parent"
                 android:id="@+id/pageButton3"
                 android:layout_marginTop="5dp"
+                android:background="#FFFFFF"
                 />
         </LinearLayout>
         <LinearLayout
@@ -67,12 +68,11 @@
                 android:textSize="28dp" />
 
                  <TextView
-              android:id="@+id/wait여건내가수정"
+              android:id="@+id/setT3"
                android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_marginLeft="10dp"
               android:layout_marginTop="10dp"
-               android:text="여긴 간단설명"
                android:textSize="18dp"/>
         </LinearLayout>
         </LinearLayout>

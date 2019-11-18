@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -23,6 +24,11 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MapFragment_food extends Fragment implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
@@ -36,6 +42,8 @@ public class MapFragment_food extends Fragment implements OnMapReadyCallback, Go
     private Integer height = 480;
     private LinearLayout linearLayout;
     private String mNumber;
+    private FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
+    private TextView setT;
 
     @Nullable
     @Override
@@ -97,6 +105,22 @@ public class MapFragment_food extends Fragment implements OnMapReadyCallback, Go
                 linearLayout = view.findViewById(R.id.mapRelative3);
                 LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,height);
                 linearLayout.setLayoutParams(r_p);
+
+                setT = view.findViewById(R.id.setT3);
+                if(pid != "dd") {
+                    DocumentReference docRef = firebaseFirestore.collection("놀이기구").document(pid);
+                    docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                            if (task.isSuccessful()) {
+                                DocumentSnapshot document = task.getResult();
+                                if (document != null) {
+                                    setT.setText(document.getString("대기시간"));
+                                }
+                            }
+                        }
+                    });
+                }
 
                 return false;
             }
