@@ -17,9 +17,17 @@
             android:id="@+id/map4"
             />
     </LinearLayout>
+
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -27,20 +35,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/pageButton4"
+                android:layout_marginTop="5dp"
                 />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:background="#FFFFFF">
+            android:background="@drawable/cir_border">
+
             <ImageView
                 android:id="@+id/storeView"
-                android:layout_width="113dp"
-                android:layout_height="106dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="3dp"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
                 android:background="@drawable/loading" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cir_border"
+            android:orientation="horizontal">
 
             <TextView
                 android:text="dsaf"
@@ -48,11 +65,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="30dp"
-                android:textSize="30dp" />
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="28dp" />
+
+            <TextView
+                android:id="@+id/wait여건내가수정"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="여긴 간단설명"
+                android:textSize="18dp"/>
         </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
     </FrameLayout>
 
-
-
 </LinearLayout>
+
