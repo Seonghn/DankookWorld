@@ -96,11 +96,14 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
             public boolean onMarkerClick(Marker marker) {
                 pid = marker.getTitle();
                 mNumber = marker.getId();
+                String[] d = mNumber.split("m");
+                String viewID = "wait" + d[1];
+                int resID = getResources().getIdentifier(viewID,"drawable", getActivity().getPackageName());
                 atImage = view.findViewById(R.id.waitView);
                 atText = view.findViewById(R.id.waitName);
 
                 atText.setText(pid);
-                atImage.setImageResource(R.drawable.bul);
+                atImage.setImageResource(resID);
 
                 linearLayout = view.findViewById(R.id.mapRelative);
 

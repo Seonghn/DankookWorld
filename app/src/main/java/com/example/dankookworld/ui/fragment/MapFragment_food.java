@@ -35,6 +35,8 @@ public class MapFragment_food extends Fragment implements OnMapReadyCallback, Go
     private View view;
     private Integer height = 480;
     private LinearLayout linearLayout;
+    private String mNumber;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -52,6 +54,7 @@ public class MapFragment_food extends Fragment implements OnMapReadyCallback, Go
                 Intent intent = new Intent(getActivity(), PageActivity.class);
                 intent.putExtra("mfN","food");
                 intent.putExtra("id", pid);
+                intent.putExtra("mNumber", mNumber);
                 startActivity(intent);
             }
         });
@@ -80,12 +83,16 @@ public class MapFragment_food extends Fragment implements OnMapReadyCallback, Go
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
+                mNumber = marker.getId();
                 pid = marker.getTitle();
+                String[] d = mNumber.split("m");
+                String viewID = "food" + d[1];
+                int resID = getResources().getIdentifier(viewID,"drawable", getActivity().getPackageName());
                 atImage = view.findViewById(R.id.foodView);
                 atText = view.findViewById(R.id.foodName);
 
                 atText.setText(pid);
-                atImage.setImageResource(R.drawable.bul);
+                atImage.setImageResource(resID);
 
                 linearLayout = view.findViewById(R.id.mapRelative3);
                 LinearLayout.LayoutParams r_p = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,height);
