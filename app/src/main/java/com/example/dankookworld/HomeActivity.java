@@ -38,6 +38,7 @@ public class HomeActivity extends AppCompatActivity {
     DocumentChange documentChange;
     private int MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION = 1001;
     private int MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1001;
+    private int MY_PERMISSIONS_REQUEST_ACCESS_SEND_SMS = 1001;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +71,7 @@ public class HomeActivity extends AppCompatActivity {
 
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.SEND_SMS},
-                    MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION);
+                    MY_PERMISSIONS_REQUEST_ACCESS_SEND_SMS);
         }
 
         Toolbar toolbar = findViewById(R.id.toolbar);
