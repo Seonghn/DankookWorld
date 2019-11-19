@@ -67,7 +67,7 @@
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
-            android:layout_marginTop="50sp"
+            android:layout_marginTop="40sp"
             android:background="@color/sky"
             android:foregroundGravity="center"
             android:gravity="left">
@@ -113,7 +113,7 @@
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
-            android:layout_marginTop="50sp"
+            android:layout_marginTop="30sp"
             android:background="@color/sky"
             android:foregroundGravity="center"
             android:gravity="left">
@@ -160,7 +160,7 @@
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30sp"
             android:background="@color/sky"
             android:foregroundGravity="center">
 
@@ -205,7 +205,7 @@
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30sp"
             android:background="@color/sky"
             android:foregroundGravity="center">
 
@@ -248,11 +248,16 @@
             </LinearLayout>
 
         </LinearLayout>
+
         <Button
             android:id="@+id/transmit"
-            android:layout_width="match_parent"
+            android:layout_width="153dp"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@color/purple2"
+            android:drawableLeft="@drawable/ic_message_black_24dp"
+            android:text="@string/send" />
     </LinearLayout>
 
 </LinearLayout>
