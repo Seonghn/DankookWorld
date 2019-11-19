@@ -39,15 +39,15 @@ public class NoticeFragment extends Fragment {
 
         list_itemArrayList = new ArrayList<Notice_itemList>();
         list_itemArrayList.add(
-                new Notice_itemList(R.drawable.mini," 공지1"," 제목1",time1," 내용1"));
+                new Notice_itemList(R.drawable.mini," 안내"," 포즈천재 에버랜드팩 출시!",time1," "));
         list_itemArrayList.add(
-                new Notice_itemList(R.drawable.mini," 공지2"," 제목2",time1," 내용2"));
+                new Notice_itemList(R.drawable.mini," 안내"," 리얼공감 청춘 웹드 <웰컴투 아마존>",time1," "));
         list_itemArrayList.add(
-                new Notice_itemList(R.drawable.mini," 공지3"," 제목3",time1," 내용3"));
+                new Notice_itemList(R.drawable.mini," 공지"," 어트랙션 점검 공지 (11~12월)",time1," "));
         list_itemArrayList.add(
-                new Notice_itemList(R.drawable.mini," 공지4"," 제목4",time1," 내용4"));
+                new Notice_itemList(R.drawable.mini," 공지"," 광장 나눔 프로젝트 오픈 스테이지",time1," "));
         list_itemArrayList.add(
-                new Notice_itemList(R.drawable.mini," 공지5"," 제목5",time1," 내용5"));
+                new Notice_itemList(R.drawable.mini," 공지"," 영혼을 쏟은 신메뉴! HIT SNACK!",time1," "));
 
         listView.setAdapter(new MyListAdapter(getActivity(), list_itemArrayList));
 

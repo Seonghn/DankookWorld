@@ -243,10 +243,16 @@
                     android:autoLink="phone"
                     android:text="@string/noinfo"
                     android:textColor="#3F51B5" />
+
+
             </LinearLayout>
 
         </LinearLayout>
-
+        <Button
+            android:id="@+id/transmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
     </LinearLayout>
 
-        </LinearLayout>
+</LinearLayout>
