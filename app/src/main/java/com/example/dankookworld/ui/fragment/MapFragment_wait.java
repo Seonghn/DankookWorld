@@ -128,7 +128,7 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
                                 DocumentSnapshot document = task.getResult();
                                 if (document != null) {
                                     setT.setText(document.getString("대기시간"));
-                                }
+                            }
                             }
                         }
                     });
