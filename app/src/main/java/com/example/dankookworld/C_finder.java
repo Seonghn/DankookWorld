@@ -1,17 +1,9 @@
 package com.example.dankookworld;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.location.Location;
 import android.location.LocationManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -19,6 +11,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -77,16 +74,19 @@ public class C_finder extends AppCompatActivity {
                                     DocumentSnapshot document = task.getResult();
                                     if (document != null) {
                                         String  phoneNo  = document.getString("전화번호");
-                                        String sms = "현재 아이를 보호하고 있습니다."+"현재 위치는 http://maps.google.com/?q="+latitude+","+longitude+"입니다. 연락주세요.";
+                                        String sms = "현재 아이를 보호하고 있습니다."+"위치는 http://maps.google.com/?q="+latitude+","+longitude;
 
                                         // 우선 메세지함으로 이동해서 보낼지말지는 사용자가 결정
-                                        Intent intent = new Intent(Intent.ACTION_SENDTO);
-                                        Uri uri = Uri.parse("sms:" + phoneNo);
-                                        intent.setData(uri);
-                                        intent.putExtra("sms_body", sms);
-                                        startActivity(intent);
-
-                                        //SendSMS(phoneNo,sms); // SendSms를 이용하여 문자보내기 시도중..
+//                                        Intent intent = new Intent(Intent.ACTION_SENDTO);
+//                                        Uri uri = Uri.parse("sms:" + phoneNo);
+//                                        intent.setData(uri);
+//                                        intent.putExtra("sms_body", sms);
+//                                        startActivity(intent);
+//                                        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+//                                        intent.putExtra("lat", latitude);
+//                                        intent.putExtra("lon", longitude);
+//                                        startActivity(intent);
+                                        SendSMS(phoneNo,sms); // SendSms를 이용하여 문자보내기 시도중..
                                     }
                                 }
                             }
