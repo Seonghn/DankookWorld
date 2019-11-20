@@ -116,4 +116,5 @@
     <string name="attrationinfo">이용정보</string>
     <string name="person2">6명</string>
     <string name="attractioninfo2">110cm 이상 탑승 가능/\n 65세 이하 탑승 가능</string>
+    <string name="send">보호자에게 알리기</string>
 </resources>
