@@ -40,7 +40,6 @@ public class QRActivity extends AppCompatActivity {
             }
         });
 
-
         findViewById(R.id.qr_scan).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

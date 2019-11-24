@@ -87,15 +87,15 @@ public class EventFragment extends Fragment {
 
         list_itemArrayList = new ArrayList<Notice_itemList>();
         list_itemArrayList.add(
-                new Notice_itemList(R.drawable.dancebattle," event1", event1 ,time1," 자이로스윙 앞"));
+                new Notice_itemList(R.drawable.dancebattle," event1", " 유령들의 댄스배틀" ,time1," 자이로스윙 앞"));
         list_itemArrayList.add(
-                new Notice_itemList(R.drawable.store2," event2"," 제목2",time1," 내용2"));
+                new Notice_itemList(R.drawable.firework," event2"," 불꽃놀이",time1," dankook castle 앞"));
         list_itemArrayList.add(
-                new Notice_itemList(R.drawable.store3," event3"," 제목3",time1," 내용3"));
+                new Notice_itemList(R.drawable.shopping," event3"," 쇼핑 놀이터",time1," 테마상점 앞"));
         list_itemArrayList.add(
-                new Notice_itemList(R.drawable.store4," event4"," 제목4",time1," 내용4"));
+                new Notice_itemList(R.drawable.store4," event4"," 캐릭터 퍼레이드",time1," 중앙공원"));
         list_itemArrayList.add(
-                new Notice_itemList(R.drawable.store5," event5"," 제목5",time1," 내용5"));
+                new Notice_itemList(R.drawable.store5," event5"," 수능 이벤트",time1," 혜당관 앞"));
 
         listView.setAdapter(new MyListAdapter_event(getActivity(), list_itemArrayList));
 
