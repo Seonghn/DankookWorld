@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyC8pjCSw_P1wJIW2R38-H-tnzxd3sc6UBs"/>
+            android:value="AIzaSyBZaUIr7pCsiQkgNYxUShXlUvqvvHlzzyo"/>
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"

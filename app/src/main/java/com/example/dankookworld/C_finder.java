@@ -74,7 +74,8 @@ public class C_finder extends AppCompatActivity {
                                     DocumentSnapshot document = task.getResult();
                                     if (document != null) {
                                         String  phoneNo  = document.getString("전화번호");
-                                        String sms = "현재 아이를 보호하고 있습니다."+"위치는 http://maps.google.com/?q="+latitude+","+longitude;
+                                        String sms1 = "현재 아이를 보호하고 있습니다.";
+                                        String sms = "위치는 http://maps.google.com/?q="+latitude+","+longitude + "  입니다. 연락바랍니다.";
 
                                         // 우선 메세지함으로 이동해서 보낼지말지는 사용자가 결정
 //                                        Intent intent = new Intent(Intent.ACTION_SENDTO);
@@ -86,7 +87,8 @@ public class C_finder extends AppCompatActivity {
 //                                        intent.putExtra("lat", latitude);
 //                                        intent.putExtra("lon", longitude);
 //                                        startActivity(intent);
-                                        SendSMS(phoneNo,sms); // SendSms를 이용하여 문자보내기 시도중..
+                                        SendSMS(phoneNo,sms1); // SendSms를 이용하여 문자보내기 시도중..
+                                        SendSMS(phoneNo,sms);
                                     }
                                 }
                             }
