@@ -39,7 +39,7 @@ public class MapFragment_food extends Fragment implements OnMapReadyCallback, Go
     private TextView atText;
     private String pid = "dd";
     private View view;
-    private Integer height = 480;
+    private Integer height = 1700;
     private LinearLayout linearLayout;
     private String mNumber;
     private FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();

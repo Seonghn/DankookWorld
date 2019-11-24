@@ -41,7 +41,7 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
     private View view;
     private LinearLayout linearLayout;
     private Button pageButton;
-    private int height = 480;
+    private int height = 1700;
     private String mNumber;
     private FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
     private TextView setT;

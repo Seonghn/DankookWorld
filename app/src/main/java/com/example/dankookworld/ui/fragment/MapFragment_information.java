@@ -37,7 +37,7 @@ public class MapFragment_information extends Fragment implements OnMapReadyCallb
     private TextView inText;
     private String pid = "dd";
     private View view;
-    private Integer height = 480;
+    private Integer height = 1700;
     private LinearLayout linearLayout;
     private String mNumber;
     private FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
