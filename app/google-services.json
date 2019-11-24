@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "260814446455-8bjq95tq93iqu4onpgj259f73oeb8mki.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dankookworld",
+            "certificate_hash": "5ec530394abd294c36cdaa3271464fdf4eb09769"
+          }
+        },
+        {
           "client_id": "260814446455-7hu8pj8b8ma97pvol5ff126k4bokqtgq.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -29,7 +37,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAZ01s5GuObWVXsR95PWtk_waOGM9M5MdE"
+          "current_key": "AIzaSyA2NqqLqWrMrojTnyoFbwERkyhJ5jvXVrc"
         }
       ],
       "services": {
