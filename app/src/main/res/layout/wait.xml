@@ -38,11 +38,11 @@
 
             <TextView
                 android:id="@+id/res1_ex"
-                android:layout_width="415dp"
+                android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:text="@string/explainres1"
+                android:text="놀이기구 상세정보를 확인할 수 있어요"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -67,7 +67,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/res1_in_phone"
+            android:id="@+id/waitT1"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:gravity="center"
@@ -89,13 +89,13 @@
             android:layout_height="55dp"
             android:layout_marginLeft="20dp"
             android:gravity="left"
-            android:text="@string/person"
+            android:text="운행시간"
             android:textColor="@color/purple"
             android:textSize="25sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/res1_pop_menu"
+            android:id="@+id/waitT2"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:gravity="center"
@@ -122,15 +122,26 @@
             android:textColor="@color/purple"
             android:textSize="25sp"
             android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/waitT3"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/waitT4"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/res1_in_time"
-            android:layout_width="250dp"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="@string/attractioninfo2"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
     </LinearLayout>
 
 

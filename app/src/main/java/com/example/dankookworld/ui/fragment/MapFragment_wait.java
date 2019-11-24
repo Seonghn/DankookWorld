@@ -45,13 +45,11 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
     private String mNumber;
     private FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
     private TextView setT;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.map_wait, container, false);
-
         mapView = (MapView) view.findViewById(R.id.map);
         mapView.onCreate(savedInstanceState);
         context = container.getContext();
@@ -61,7 +59,7 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
         pageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), PageActivity.class);
+                final Intent intent = new Intent(getActivity(), PageActivity.class);
                 intent.putExtra("mfN","wait");
                 intent.putExtra("id", pid);
                 intent.putExtra("mNumber", mNumber);
@@ -127,7 +125,7 @@ public class MapFragment_wait extends Fragment implements OnMapReadyCallback {
                             if (task.isSuccessful()) {
                                 DocumentSnapshot document = task.getResult();
                                 if (document != null) {
-                                    setT.setText(document.getString("대기시간"));
+                                    setT.setText("대기시간 : " + document.getString("대기시간"));
                             }
                             }
                         }
