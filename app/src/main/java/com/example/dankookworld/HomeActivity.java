@@ -45,6 +45,13 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+//        Intent intent = new Intent();
+//        intent.setAction(Intent.ACTION_VIEW);
+//        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+//        intent.addCategory(Intent.CATEGORY_DEFAULT);
+//        intent.setData(Uri.parse("dw://"));
+//        startActivity(intent);
+
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
