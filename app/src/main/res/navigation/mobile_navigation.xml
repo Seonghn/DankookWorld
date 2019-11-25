@@ -35,9 +35,9 @@
         android:label="@string/menushare"
         tools:layout="@layout/fragment_map" />
 
-    <fragment
+    <activity
         android:id="@+id/nav_setting"
-        android:name="com.example.dankookworld.ui.fragment.SettingFragment"
+        android:name="com.example.dankookworld.SettingActivity"
         android:label="@string/menusend"
         tools:layout="@layout/fragment_setting" />
 

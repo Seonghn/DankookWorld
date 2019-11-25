@@ -61,9 +61,10 @@ public class NoticeFragment extends Fragment {
                 }
             }
         });
+
         list_itemArrayList = new ArrayList<Notice_itemList>();
         list_itemArrayList.add(
-                new Notice_itemList(R.drawable.mini," 안내",notice1,time1," "));
+                new Notice_itemList(R.drawable.mini," 안내"," 포즈천재 에버랜드팩 출시!",time1," "));
         list_itemArrayList.add(
                 new Notice_itemList(R.drawable.mini," 안내"," 리얼공감 청춘 웹드 <웰컴투 아마존>",time1," "));
         list_itemArrayList.add(

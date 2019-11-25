@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.AdapterView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dankookworld.MyListAdapter_event;
@@ -37,7 +38,7 @@ public class EventFragment extends Fragment {
     com.example.dankookworld.MyListAdapter MyListAdapter;
     ArrayList<Notice_itemList> list_itemArrayList;
 
-    private String event1;
+    public String event1 = "dd" ;
     private String event2;
     private String event3;
     private String event4;
@@ -55,47 +56,34 @@ public class EventFragment extends Fragment {
         Date time = new Date();
         String time1 = format1.format(time);
 
+        final TextView textView14 = view.findViewById(R.id.textView14);
+
         DocumentReference docRef = db.collection("이벤트").document("이벤트1");
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
-                    if (document != null) {
-                        event1 = document.getString("제목");
-
+                    if (document.exists()) {
+                        // textView14.setText(document.getString("제목")); //왜 뷰id를 통한 setText로는 전달이 되는데
+                        event1 = document.getString("제목"); //string으로 선언된 event1에는 안들어가는걸까?
                     }
                 }
             }
         });
-/*
-        db.collection("users")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.d(TAG, document.getId() + " => " + document.getData());
-                            }
-                        } else {
-                            Log.w(TAG, "Error getting documents.", task.getException());
-                        }
-                    }
-                });
-*/
 
         list_itemArrayList = new ArrayList<Notice_itemList>();
-        list_itemArrayList.add(
-                new Notice_itemList(R.drawable.dancebattle," event1", " 유령들의 댄스배틀" ,time1," 자이로스윙 앞"));
-        list_itemArrayList.add(
-                new Notice_itemList(R.drawable.firework," event2"," 불꽃놀이",time1," dankook castle 앞"));
-        list_itemArrayList.add(
-                new Notice_itemList(R.drawable.shopping," event3"," 쇼핑 놀이터",time1," 테마상점 앞"));
-        list_itemArrayList.add(
-                new Notice_itemList(R.drawable.store4," event4"," 캐릭터 퍼레이드",time1," 중앙공원"));
-        list_itemArrayList.add(
-                new Notice_itemList(R.drawable.store5," event5"," 수능 이벤트",time1," 혜당관 앞"));
+        // Notice_itemList n1 =  new Notice_itemList(R.drawable.dancebattle," event1", event1 ,time1," 자이로스윙 앞");
+        Notice_itemList n1 =  new Notice_itemList(R.drawable.dancebattle," event1", " 유령들의 댄스배틀" ,time1," 자이로스윙 앞");
+        Notice_itemList n2 = new Notice_itemList(R.drawable.firework," event2"," 불꽃놀이",time1," dankook castle 앞");
+        Notice_itemList n3 = new Notice_itemList(R.drawable.shopping," event3"," 쇼핑 놀이터",time1," 테마상점 앞");
+        Notice_itemList n4 = new Notice_itemList(R.drawable.store4," event4"," 캐릭터 퍼레이드",time1," 중앙공원");
+        Notice_itemList n5 = new Notice_itemList(R.drawable.suneung," event5"," 수능 이벤트",time1," 혜당관 앞");
+        list_itemArrayList.add(n1);
+        list_itemArrayList.add(n2);
+        list_itemArrayList.add(n3);
+        list_itemArrayList.add(n4);
+        list_itemArrayList.add(n5);
 
         listView.setAdapter(new MyListAdapter_event(getActivity(), list_itemArrayList));
 

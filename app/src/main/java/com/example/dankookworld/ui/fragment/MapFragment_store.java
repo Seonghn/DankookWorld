@@ -38,7 +38,7 @@ public class MapFragment_store extends Fragment implements OnMapReadyCallback {
     private String pid = "dd";
     private View view;
     private LinearLayout linearLayout;
-    private Integer height = 480;
+    private Integer height = 1700;
     private String mNumber;
     private FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
     private TextView setT;
@@ -107,14 +107,14 @@ public class MapFragment_store extends Fragment implements OnMapReadyCallback {
 
                 setT = view.findViewById(R.id.setT4);
                 if(pid != "dd") {
-                    DocumentReference docRef = firebaseFirestore.collection("놀이기구").document(pid);
+                    DocumentReference docRef = firebaseFirestore.collection("상점").document(pid);
                     docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                             if (task.isSuccessful()) {
                                 DocumentSnapshot document = task.getResult();
                                 if (document != null) {
-                                    setT.setText(document.getString("대기시간"));
+                                    setT.setText(document.getString("운영시간"));
                                 }
                             }
                         }
@@ -127,7 +127,7 @@ public class MapFragment_store extends Fragment implements OnMapReadyCallback {
         LatLng l1 = new LatLng(37.323047, 127.126698);
         MarkerOptions m1 = new MarkerOptions();
         m1.position(l1);
-        m1.title("감독의 분장실/의상실");
+        m1.title("분장실,의상실");
         mMap.addMarker(m1);
 
         LatLng l2 = new LatLng(37.322933, 127.125220);

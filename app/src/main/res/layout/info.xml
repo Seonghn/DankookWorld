@@ -38,11 +38,11 @@
 
         <TextView
             android:id="@+id/res2_ex"
-            android:layout_width="415dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="@string/infoexplainres1"
+            android:text="아래와 같은 서비스를 제공합니다"
             android:textColor="@android:color/black"
             android:textSize="16sp" />
     </LinearLayout>
@@ -67,7 +67,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/res2_pop_menu"
+            android:id="@+id/info1"
             android:layout_width="221dp"
             android:layout_height="70dp"
             android:layout_marginLeft="10dp"
@@ -98,7 +98,7 @@
             />
 
         <TextView
-            android:id="@+id/res2_in_time"
+            android:id="@+id/info2"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:gravity="center"
@@ -129,7 +129,7 @@
             />
 
         <TextView
-            android:id="@+id/res2_in_phone"
+            android:id="@+id/info3"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:gravity="center"

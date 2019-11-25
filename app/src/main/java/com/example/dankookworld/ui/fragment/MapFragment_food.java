@@ -39,7 +39,7 @@ public class MapFragment_food extends Fragment implements OnMapReadyCallback, Go
     private TextView atText;
     private String pid = "dd";
     private View view;
-    private Integer height = 480;
+    private Integer height = 1700;
     private LinearLayout linearLayout;
     private String mNumber;
     private FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
@@ -108,14 +108,14 @@ public class MapFragment_food extends Fragment implements OnMapReadyCallback, Go
 
                 setT = view.findViewById(R.id.setT3);
                 if(pid != "dd") {
-                    DocumentReference docRef = firebaseFirestore.collection("놀이기구").document(pid);
+                    DocumentReference docRef = firebaseFirestore.collection("음식점").document(pid);
                     docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                             if (task.isSuccessful()) {
                                 DocumentSnapshot document = task.getResult();
                                 if (document != null) {
-                                    setT.setText(document.getString("대기시간"));
+                                    setT.setText(document.getString("대표메뉴"));
                                 }
                             }
                         }

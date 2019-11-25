@@ -38,11 +38,11 @@
 
         <TextView
             android:id="@+id/res3_ex"
-            android:layout_width="415dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="@string/explainres1"
+            android:text="다양한 메뉴의 음식점 정보를 확인하세요"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
     </LinearLayout>
@@ -68,7 +68,7 @@
             />
 
         <TextView
-            android:id="@+id/res3_pop_menu"
+            android:id="@+id/food1"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:gravity="center"
@@ -99,7 +99,7 @@
             />
 
         <TextView
-            android:id="@+id/res3_in_time"
+            android:id="@+id/food2"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:gravity="center"
@@ -130,7 +130,7 @@
             />
 
         <TextView
-            android:id="@+id/res3_in_phone"
+            android:id="@+id/food3"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:gravity="center"

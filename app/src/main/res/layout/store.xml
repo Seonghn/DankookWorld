@@ -38,11 +38,11 @@
 
         <TextView
             android:id="@+id/res4_ex"
-            android:layout_width="415dp"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="@string/explainres1"
+            android:text="여러가지 캐릭터 상품들을 만나보세요"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
     </LinearLayout>
@@ -60,7 +60,7 @@
             android:layout_width="100dp"
             android:layout_height="55dp"
             android:gravity="left"
-            android:text="@string/popmenu"
+            android:text="이용정보"
             android:textColor="@color/purple"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -68,7 +68,7 @@
             />
 
         <TextView
-            android:id="@+id/res4_pop_menu"
+            android:id="@+id/store1"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:gravity="center"
@@ -87,7 +87,7 @@
         android:layout_marginTop="10dp">
 
         <TextView
-            android:id="@+id/res4_time"
+            android:id="@+id/res"
             android:layout_width="100dp"
             android:layout_height="55dp"
             android:gravity="left"
@@ -99,7 +99,7 @@
             />
 
         <TextView
-            android:id="@+id/res4_in_time"
+            android:id="@+id/store2"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:gravity="center"
@@ -130,7 +130,7 @@
             />
 
         <TextView
-            android:id="@+id/res4_in_phone"
+            android:id="@+id/store3"
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:gravity="center"

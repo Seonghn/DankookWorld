@@ -36,6 +36,8 @@
                   tools:replace="screenOrientation"/>
         <activity android:name=".PageActivity" />
         <activity android:name=".InitialActivity" />
+        <activity android:name=".SettingActivity" />
+
         <service android:name=".GpsInfo" />
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
