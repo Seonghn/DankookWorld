@@ -38,11 +38,11 @@ public class EventFragment extends Fragment {
     com.example.dankookworld.MyListAdapter MyListAdapter;
     ArrayList<Notice_itemList> list_itemArrayList;
 
-    public String event1 = "dd" ;
-    private String event2;
-    private String event3;
-    private String event4;
-    private String event5;
+    public String event1_title, event1_time, event1_loc;
+    public String event2_title, event2_time, event2_loc;
+    public String event3_title, event3_time, event3_loc;
+    public String event4_title, event4_time, event4_loc;
+    public String event5_title, event5_time, event5_loc;
 
     @Nullable
     @Override
@@ -50,14 +50,16 @@ public class EventFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_event, container, false);
 
-        ListView listView = (ListView) view.findViewById(R.id.eventList);
-
+        final ListView listView = (ListView) view.findViewById(R.id.eventList);
+/*
         SimpleDateFormat format1 = new SimpleDateFormat ( "yyyy-MM-dd HH:mm");
         Date time = new Date();
         String time1 = format1.format(time);
 
-        final TextView textView14 = view.findViewById(R.id.textView14);
+*/
+        list_itemArrayList = new ArrayList<Notice_itemList>();
 
+        //event1
         DocumentReference docRef = db.collection("이벤트").document("이벤트1");
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -65,27 +67,98 @@ public class EventFragment extends Fragment {
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
-                        // textView14.setText(document.getString("제목")); //왜 뷰id를 통한 setText로는 전달이 되는데
-                        event1 = document.getString("제목"); //string으로 선언된 event1에는 안들어가는걸까?
+                        event1_title = document.getString("제목"); //string으로 선언된 event1에는 안들어가는걸까?
+                        event1_time = document.getString("날짜");
+                        event1_loc = document.getString("장소");
+
+                        Notice_itemList n1 =  new Notice_itemList(R.drawable.dancebattle," event1", event1_title , event1_time, event1_loc);
+                        list_itemArrayList.add(n1);
+
+                        listView.setAdapter(new MyListAdapter_event(getActivity(), list_itemArrayList));
                     }
                 }
             }
         });
+        //event2
+        DocumentReference docRef2 = db.collection("이벤트").document("이벤트2");
+        docRef2.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        event2_title = document.getString("제목"); //string으로 선언된 event1에는 안들어가는걸까?
+                        event2_time = document.getString("날짜");
+                        event2_loc = document.getString("장소");
 
-        list_itemArrayList = new ArrayList<Notice_itemList>();
-        // Notice_itemList n1 =  new Notice_itemList(R.drawable.dancebattle," event1", event1 ,time1," 자이로스윙 앞");
-        Notice_itemList n1 =  new Notice_itemList(R.drawable.dancebattle," event1", " 유령들의 댄스배틀" ,time1," 자이로스윙 앞");
-        Notice_itemList n2 = new Notice_itemList(R.drawable.firework," event2"," 불꽃놀이",time1," dankook castle 앞");
-        Notice_itemList n3 = new Notice_itemList(R.drawable.shopping," event3"," 쇼핑 놀이터",time1," 테마상점 앞");
-        Notice_itemList n4 = new Notice_itemList(R.drawable.store4," event4"," 캐릭터 퍼레이드",time1," 중앙공원");
-        Notice_itemList n5 = new Notice_itemList(R.drawable.suneung," event5"," 수능 이벤트",time1," 혜당관 앞");
-        list_itemArrayList.add(n1);
-        list_itemArrayList.add(n2);
-        list_itemArrayList.add(n3);
-        list_itemArrayList.add(n4);
-        list_itemArrayList.add(n5);
+                        Notice_itemList n2 =  new Notice_itemList(R.drawable.firework," event2", event2_title , event2_time, event2_loc);
+                        list_itemArrayList.add(n2);
 
-        listView.setAdapter(new MyListAdapter_event(getActivity(), list_itemArrayList));
+                        listView.setAdapter(new MyListAdapter_event(getActivity(), list_itemArrayList));
+                    }
+                }
+            }
+        });
+        //event3
+        DocumentReference docRef3 = db.collection("이벤트").document("이벤트3");
+        docRef3.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        event3_title = document.getString("제목");
+                        event3_time = document.getString("날짜");
+                        event3_loc = document.getString("장소");
+
+                        Notice_itemList n3 = new Notice_itemList(R.drawable.shopping," event3", event3_title, event3_time, event3_loc);
+                        list_itemArrayList.add(n3);
+
+                        listView.setAdapter(new MyListAdapter_event(getActivity(), list_itemArrayList));
+                    }
+                }
+            }
+        });
+        //event4
+        DocumentReference docRef4 = db.collection("이벤트").document("이벤트4");
+        docRef4.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        event4_title = document.getString("제목");
+                        event4_time = document.getString("날짜");
+                        event4_loc = document.getString("장소");
+
+                        Notice_itemList n4 = new Notice_itemList(R.drawable.store4," event4", event4_title, event4_time, event4_loc);
+                        list_itemArrayList.add(n4);
+
+                        listView.setAdapter(new MyListAdapter_event(getActivity(), list_itemArrayList));
+                    }
+                }
+            }
+        });
+        // event5
+        DocumentReference docRef5 = db.collection("이벤트").document("이벤트5");
+        docRef5.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        event5_title = document.getString("제목");
+                        event5_time = document.getString("날짜");
+                        event5_loc = document.getString("장소");
+
+                        Notice_itemList n5 = new Notice_itemList(R.drawable.suneung," event5", event5_title, event5_time, event5_loc);
+                        list_itemArrayList.add(n5);
+
+                        listView.setAdapter(new MyListAdapter_event(getActivity(), list_itemArrayList));
+                    }
+                }
+            }
+        });
 
         return  view;
 

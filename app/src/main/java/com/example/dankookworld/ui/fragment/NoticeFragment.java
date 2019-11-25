@@ -30,11 +30,11 @@ public class NoticeFragment extends Fragment {
     com.example.dankookworld.MyListAdapter MyListAdapter;
     ArrayList<Notice_itemList> list_itemArrayList;
 
-    private String notice1;
-    private String notice2;
-    private String notice3;
-    private String notice4;
-    private String notice5;
+    public String notice1_title, notice1_time;
+    public String notice2_title, notice2_time;
+    public String notice3_title, notice3_time;
+    public String notice4_title, notice4_time;
+    public String notice5_title, notice5_time;
 
 
     @Nullable
@@ -43,48 +43,98 @@ public class NoticeFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_notice, container, false);
 
-        ListView listView = (ListView) view.findViewById(R.id.noticeList);
+        final ListView listView = (ListView) view.findViewById(R.id.noticeList);
+        list_itemArrayList = new ArrayList<Notice_itemList>();
 
-        SimpleDateFormat format1 = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:ss");
-        Date time = new Date();
-        String time1 = format1.format(time);
-
-        DocumentReference docRef = firebaseFirestore.collection("공지사항").document("공지1");
-        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+        DocumentReference doc = firebaseFirestore.collection("공지사항").document("공지1");
+        doc.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
-                    if (document != null) {
-                        notice1 = document.getString("제목");
+                    if (document.exists()) {
+                        notice1_title = document.getString("제목");
+                        notice1_time = document.getString("날짜");
+
+                        list_itemArrayList.add(
+                                new Notice_itemList(R.drawable.mini," 안내",notice1_title, notice1_time," "));
+                        listView.setAdapter(new MyListAdapter(getActivity(), list_itemArrayList));
                     }
                 }
             }
         });
 
-        list_itemArrayList = new ArrayList<Notice_itemList>();
-        list_itemArrayList.add(
-                new Notice_itemList(R.drawable.mini," 안내"," 포즈천재 에버랜드팩 출시!",time1," "));
-        list_itemArrayList.add(
-                new Notice_itemList(R.drawable.mini," 안내"," 리얼공감 청춘 웹드 <웰컴투 아마존>",time1," "));
-        list_itemArrayList.add(
-                new Notice_itemList(R.drawable.mini," 공지"," 어트랙션 점검 공지 (11~12월)",time1," "));
-        list_itemArrayList.add(
-                new Notice_itemList(R.drawable.mini," 공지"," 광장 나눔 프로젝트 오픈 스테이지",time1," "));
-        list_itemArrayList.add(
-                new Notice_itemList(R.drawable.mini," 공지"," 영혼을 쏟은 신메뉴! HIT SNACK!",time1," "));
-
-        listView.setAdapter(new MyListAdapter(getActivity(), list_itemArrayList));
-
-
-        /*
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        DocumentReference doc2 = firebaseFirestore.collection("공지사항").document("공지2");
+        doc2.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        notice2_title = document.getString("제목");
+                        notice2_time = document.getString("날짜");
 
+                        list_itemArrayList.add(
+                                new Notice_itemList(R.drawable.mini," 안내",notice2_title, notice2_time," "));
+                        listView.setAdapter(new MyListAdapter(getActivity(), list_itemArrayList));
+                    }
+                }
             }
         });
-        */
+
+        DocumentReference doc3 = firebaseFirestore.collection("공지사항").document("공지3");
+        doc3.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        notice3_title = document.getString("제목");
+                        notice3_time = document.getString("날짜");
+
+                        list_itemArrayList.add(
+                                new Notice_itemList(R.drawable.mini," 공지",notice3_title, notice3_time," "));
+                        listView.setAdapter(new MyListAdapter(getActivity(), list_itemArrayList));
+                    }
+                }
+            }
+        });
+
+        DocumentReference doc4 = firebaseFirestore.collection("공지사항").document("공지4");
+        doc4.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        notice4_title = document.getString("제목");
+                        notice4_time = document.getString("날짜");
+
+                        list_itemArrayList.add(
+                                new Notice_itemList(R.drawable.mini," 안내",notice4_title, notice4_time," "));
+                        listView.setAdapter(new MyListAdapter(getActivity(), list_itemArrayList));
+                    }
+                }
+            }
+        });
+
+        DocumentReference doc5 = firebaseFirestore.collection("공지사항").document("공지5");
+        doc5.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        notice5_title = document.getString("제목");
+                        notice5_time = document.getString("날짜");
+
+                        list_itemArrayList.add(
+                                new Notice_itemList(R.drawable.mini," 안내",notice5_title, notice5_time," "));
+                        listView.setAdapter(new MyListAdapter(getActivity(), list_itemArrayList));
+                    }
+                }
+            }
+        });
 
         return  view;
 
