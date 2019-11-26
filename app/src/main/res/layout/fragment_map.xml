@@ -43,13 +43,14 @@
                         android:visibility="visible"
                         app:srcCompat="@drawable/attraction"
                         tools:visibility="visible" />
+
                     <TextView
                         android:id="@+id/textView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
-                        android:text="@string/wait"
+                        android:text="Attraction"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -78,7 +79,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
-                        android:text="인포"
+                        android:text="Info"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -105,7 +106,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
-                        android:text="@string/food"
+                        android:text="Food"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -131,7 +132,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
-                        android:text="@string/store"
+                        android:text="Store"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
