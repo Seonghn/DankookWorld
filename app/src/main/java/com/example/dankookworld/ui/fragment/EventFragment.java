@@ -13,10 +13,12 @@ import android.widget.ListView;
 import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 import com.example.dankookworld.MyListAdapter_event;
 import com.example.dankookworld.Notice_itemList;
 import com.example.dankookworld.R;
+import com.example.dankookworld.event1Activity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -33,11 +35,13 @@ import java.util.Date;
 
 public class EventFragment extends Fragment {
 
+    private Context context;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     ListView listView;
     com.example.dankookworld.MyListAdapter MyListAdapter;
     ArrayList<Notice_itemList> list_itemArrayList;
 
+    public String event = "event";
     public String event1_title, event1_time, event1_loc;
     public String event2_title, event2_time, event2_loc;
     public String event3_title, event3_time, event3_loc;
@@ -49,17 +53,12 @@ public class EventFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_event, container, false);
+        context = container.getContext();
 
         final ListView listView = (ListView) view.findViewById(R.id.eventList);
-/*
-        SimpleDateFormat format1 = new SimpleDateFormat ( "yyyy-MM-dd HH:mm");
-        Date time = new Date();
-        String time1 = format1.format(time);
 
-*/
         list_itemArrayList = new ArrayList<Notice_itemList>();
 
-        //event1
         DocumentReference docRef = db.collection("이벤트").document("이벤트1");
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -67,18 +66,21 @@ public class EventFragment extends Fragment {
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
-                        event1_title = document.getString("제목"); //string으로 선언된 event1에는 안들어가는걸까?
+                        event1_title = document.getString("제목");
                         event1_time = document.getString("날짜");
                         event1_loc = document.getString("장소");
 
-                        Notice_itemList n1 =  new Notice_itemList(R.drawable.dancebattle," event1", event1_title , event1_time, event1_loc);
+                        Notice_itemList n1 =  new Notice_itemList(R.drawable.dancebattle, event, event1_title , event1_time, event1_loc);
                         list_itemArrayList.add(n1);
 
                         listView.setAdapter(new MyListAdapter_event(getActivity(), list_itemArrayList));
+
+
                     }
                 }
             }
         });
+
         //event2
         DocumentReference docRef2 = db.collection("이벤트").document("이벤트2");
         docRef2.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -87,14 +89,16 @@ public class EventFragment extends Fragment {
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
-                        event2_title = document.getString("제목"); //string으로 선언된 event1에는 안들어가는걸까?
+                        event2_title = document.getString("제목");
                         event2_time = document.getString("날짜");
                         event2_loc = document.getString("장소");
 
-                        Notice_itemList n2 =  new Notice_itemList(R.drawable.firework," event2", event2_title , event2_time, event2_loc);
+                        Notice_itemList n2 =  new Notice_itemList(R.drawable.firework, event, event2_title , event2_time, event2_loc);
                         list_itemArrayList.add(n2);
 
                         listView.setAdapter(new MyListAdapter_event(getActivity(), list_itemArrayList));
+
+
                     }
                 }
             }
@@ -111,10 +115,12 @@ public class EventFragment extends Fragment {
                         event3_time = document.getString("날짜");
                         event3_loc = document.getString("장소");
 
-                        Notice_itemList n3 = new Notice_itemList(R.drawable.shopping," event3", event3_title, event3_time, event3_loc);
+                        Notice_itemList n3 = new Notice_itemList(R.drawable.shopping, event, event3_title, event3_time, event3_loc);
                         list_itemArrayList.add(n3);
 
                         listView.setAdapter(new MyListAdapter_event(getActivity(), list_itemArrayList));
+
+
                     }
                 }
             }
@@ -131,10 +137,12 @@ public class EventFragment extends Fragment {
                         event4_time = document.getString("날짜");
                         event4_loc = document.getString("장소");
 
-                        Notice_itemList n4 = new Notice_itemList(R.drawable.store4," event4", event4_title, event4_time, event4_loc);
+                        Notice_itemList n4 = new Notice_itemList(R.drawable.store4, event, event4_title, event4_time, event4_loc);
                         list_itemArrayList.add(n4);
 
                         listView.setAdapter(new MyListAdapter_event(getActivity(), list_itemArrayList));
+
+
                     }
                 }
             }
@@ -151,12 +159,29 @@ public class EventFragment extends Fragment {
                         event5_time = document.getString("날짜");
                         event5_loc = document.getString("장소");
 
-                        Notice_itemList n5 = new Notice_itemList(R.drawable.suneung," event5", event5_title, event5_time, event5_loc);
+                        Notice_itemList n5 = new Notice_itemList(R.drawable.suneung, event, event5_title, event5_time, event5_loc);
                         list_itemArrayList.add(n5);
 
                         listView.setAdapter(new MyListAdapter_event(getActivity(), list_itemArrayList));
+
+
                     }
                 }
+            }
+        });
+
+        //클릭이벤트
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent = new Intent(getActivity(), event1Activity.class);
+                intent.putExtra("profile", Integer.toString(list_itemArrayList.get(position).getProfile_image()));
+                intent.putExtra("name", list_itemArrayList.get(position).getTitle());
+                intent.putExtra("time", list_itemArrayList.get(position).getWrite_date());
+                intent.putExtra("location", list_itemArrayList.get(position).getContent());
+
+                startActivity(intent);
             }
         });
 

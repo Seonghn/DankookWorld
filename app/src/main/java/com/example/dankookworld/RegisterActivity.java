@@ -50,6 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
 //            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
 //        }
 
+
         name = findViewById(R.id.name);
         phone = findViewById(R.id.phone);
         phone.addTextChangedListener(new PhoneNumberFormattingTextWatcher());
