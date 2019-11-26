@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:gravity="center"
-            android:text="@string/info1"
+            android:text="이벤트명"
             android:textColor="@android:color/black"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -66,11 +66,11 @@
 
         <TextView
             android:id="@+id/event1_loc"
-            android:layout_width="221dp"
+            android:layout_width="250dp"
             android:layout_height="70dp"
             android:layout_marginLeft="10dp"
             android:gravity="center"
-            android:text="가이드맵제공, 공연시간 안내"
+            android:text="이벤트 장소"
             android:textColor="@android:color/black"
             android:textSize="18sp" />
     </LinearLayout>
@@ -99,7 +99,7 @@
             android:layout_width="250dp"
             android:layout_height="70dp"
             android:gravity="center"
-            android:text="@string/timeres1"
+            android:text="이벤트시간이라구욧"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             />
